@@ -120,7 +120,7 @@ Decide once Ridge & Valley has launched and the Collective has settled.
 - "Multiple makers, one collective."
 - "Handmade goods, made by your neighbors."
 - "Neighbors helping neighbors."
-- "The old mountain way."
+- "The old way."
 - "A Chattanooga cottage food collective."
 - TBD
 
