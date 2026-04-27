@@ -294,7 +294,6 @@ h2, h3, h4 { font-weight: 500; }
    ============================================================= */
 
 .hero {
-  min-height: 60vh;
   display: flex;
   align-items: center;
   padding: var(--space-12) var(--space-8);
@@ -370,7 +369,7 @@ section.cc-section--alt {
 
 @media (max-width: 768px) {
   section.cc-section { padding: var(--space-16) var(--space-5); }
-  .hero { padding: var(--space-10) var(--space-5); min-height: 50vh; }
+  .hero { padding: var(--space-10) var(--space-5); }
 }
 
 .section-header { margin-bottom: var(--space-10); }
