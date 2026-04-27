@@ -24,6 +24,7 @@
   --cc-green:        #3a5c3a;
   --cc-green-light:  #5a8a4a;
   --cc-ochre:        #c4831a;
+  --cc-ochre-text:   #8c5912; /* AA contrast against cream — use for ochre TEXT only */
   --cc-ochre-light:  #e8a83a;
   --cc-rust:         #a04520;
   --cc-rust-light:   #c86040;
@@ -126,7 +127,7 @@ h2, h3, h4 { font-weight: 500; }
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--cc-ochre);
+  color: var(--cc-ochre-text);
   margin-bottom: var(--space-3);
 }
 
@@ -411,8 +412,9 @@ section.cc-section--alt {
   background: var(--cc-green-light);
   color: var(--cc-text-inv);
 }
-.btn--primary.btn--sd { background: var(--sd-accent); }
-.btn--primary.btn--sd:hover { background: var(--sd-accent-dark); }
+/* SD button: use the darker chili so white text passes AA (5:1+). */
+.btn--primary.btn--sd { background: var(--sd-accent-dark); }
+.btn--primary.btn--sd:hover { background: #a13315; }
 .btn--primary.btn--rv { background: var(--rv-sage); }
 .btn--primary.btn--rv:hover { background: var(--rv-sage-dark); }
 
@@ -515,7 +517,7 @@ section.cc-section--alt {
   margin-bottom: var(--space-3);
   align-self: flex-start;
 }
-.badge--sd  { background: rgba(232, 82, 42, 0.10);  color: var(--sd-accent); }
+.badge--sd  { background: rgba(232, 82, 42, 0.10);  color: var(--sd-accent-dark); }
 .badge--rv  { background: rgba(107, 140, 90, 0.14); color: var(--rv-sage-dark); }
 .badge--cc  { background: rgba(58, 92, 58, 0.10);   color: var(--cc-green); }
 
@@ -530,7 +532,7 @@ section.cc-section--alt {
   font-family: var(--cc-font-body);
   font-size: 0.6875rem;
   font-weight: 500;
-  color: var(--cc-text-4);
+  color: var(--cc-text-3);
   background: var(--cc-bg-section);
   border-radius: var(--radius-sharp);
   padding: 4px 10px;
@@ -685,7 +687,7 @@ section.cc-section--alt {
   text-transform: uppercase;
   color: var(--cc-text-5);
 }
-.site-footer__col h4 {
+.site-footer__col h2 {
   font-family: var(--cc-font-body);
   font-size: 0.6875rem;
   font-weight: 700;
@@ -719,7 +721,7 @@ section.cc-section--alt {
   margin-top: var(--space-3);
   font-size: 0.6875rem;
   letter-spacing: 0.06em;
-  color: var(--cc-text-4);
+  color: var(--cc-text-5);
 }
 
 @media (max-width: 768px) {

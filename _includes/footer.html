@@ -8,7 +8,7 @@
   </div>
 
   <div class="site-footer__col">
-    <h4>Members</h4>
+    <h2>Members</h2>
     {%- assign members_sorted = site.members | sort: 'order' -%}
     {%- for m in members_sorted -%}
       {%- if m.external_url -%}
@@ -20,7 +20,7 @@
   </div>
 
   <div class="site-footer__col">
-    <h4>Collective</h4>
+    <h2>Collective</h2>
     <a href="{{ '/#why' | relative_url }}">Why a Collective</a>
     <a href="{{ '/#find' | relative_url }}">Find Us</a>
     <a href="mailto:hello@chattcollective.com">hello@chattcollective.com</a>
