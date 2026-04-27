@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #1a1a1a; font-family: 'Inter', system-ui, sans-serif; padding: 20px; }
+  .row { display: flex; gap: 0; }
+  .swatch { flex: 1; height: 80px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px 10px; }
+  .swatch-label { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; }
+  .swatch-hex { font-size: 10px; opacity: 0.6; margin-top: 2px; }
+  .section-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #666; margin-bottom: 8px; font-weight: 600; }
+  .gap { height: 12px; }
+</style>
+</head>
+<body>
+<div class="section-label">Starving Dragon — Dark Backgrounds</div>
+<div class="row">
+  <div class="swatch" style="background:#080402;">
+    <span class="swatch-label" style="color:#e8522a">Footer</span>
+    <span class="swatch-hex" style="color:#e8522a">#080402</span>
+  </div>
+  <div class="swatch" style="background:#0d0703;">
+    <span class="swatch-label" style="color:#e8522a">Primary</span>
+    <span class="swatch-hex" style="color:#e8522a">#0d0703</span>
+  </div>
+  <div class="swatch" style="background:#110904;">
+    <span class="swatch-label" style="color:#e8522a">Section</span>
+    <span class="swatch-hex" style="color:#e8522a">#110904</span>
+  </div>
+</div>
+<div class="gap"></div>
+<div class="section-label">Accent</div>
+<div class="row">
+  <div class="swatch" style="background:#c43d1a; flex:0.6;">
+    <span class="swatch-label" style="color:#fff">Hover</span>
+    <span class="swatch-hex" style="color:#fff">#c43d1a</span>
+  </div>
+  <div class="swatch" style="background:#e8522a; flex:1;">
+    <span class="swatch-label" style="color:#fff">Primary</span>
+    <span class="swatch-hex" style="color:#fff">#e8522a</span>
+  </div>
+  <div class="swatch" style="background:rgba(200,60,10,0.20); flex:0.8; border:1px solid rgba(200,80,20,0.3);">
+    <span class="swatch-label" style="color:#e8522a">Glow</span>
+    <span class="swatch-hex" style="color:#e8522a">20% opacity</span>
+  </div>
+  <div class="swatch" style="background:rgba(200,80,20,0.12); flex:0.8; border:1px solid rgba(200,80,20,0.3);">
+    <span class="swatch-label" style="color:#e8522a">Border</span>
+    <span class="swatch-hex" style="color:#e8522a">12% opacity</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Primary">
+  <a href="{{ '/' | relative_url }}" class="site-nav__logo">
+    <span class="site-nav__mark" aria-hidden="true">✦</span>
+    <span class="site-nav__name">Chattanooga Collective</span>
+  </a>
+
+  <button class="site-nav__toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="site-nav__links" id="primary-menu">
+    {%- for item in site.data.navigation.main -%}
+      <li>
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url contains item.url and item.url != '/' %}aria-current="page"{% endif %}>
+          {{ item.title }}
+        </a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+<script>
+  (function () {
+    var btn = document.querySelector('.site-nav__toggle');
+    var menu = document.getElementById('primary-menu');
+    if (!btn || !menu) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
+    });
+  })();
+</script>

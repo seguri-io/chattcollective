@@ -1,0 +1,7 @@
+<header class="section-header{% if include.center %} section-header--center{% endif %}">
+  {%- if include.eyebrow -%}
+    <p class="eyebrow">{{ include.eyebrow }}</p>
+  {%- endif -%}
+  <h2 class="section-header__title">{{ include.title }}</h2>
+  <span class="divider-bar" aria-hidden="true"></span>
+</header>

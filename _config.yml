@@ -1,0 +1,71 @@
+title: Chattanooga Collective
+tagline: A Chattanooga cottage food collective
+description: >-
+  Chattanooga Collective is a small group of independent cottage food makers
+  in Chattanooga, TN. A directory and a front door — homemade goods made by
+  your neighbors under Tennessee's Domestic Kitchen rules.
+url: https://chattcollective.com
+locale: en_US
+timezone: America/New_York
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: /:path/
+
+include:
+  - _pages
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - docs
+  - CLAUDE.md
+  - ROADMAP.md
+  - README.md
+  - "*.gz"
+  - "*.tar"
+
+# Plugins (all GitHub Pages compatible)
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  vendors:
+    output: true
+    permalink: /vendors/:name/
+
+# Front-matter defaults
+defaults:
+  - scope:
+      path: ""
+      type: vendors
+    values:
+      layout: vendor
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page
+
+# SEO / social
+author:
+  name: Chattanooga Collective
+  email: hello@chattcollective.com
+twitter:
+  card: summary_large_image
+social:
+  type: Organization
+  name: Chattanooga Collective
+  links: []

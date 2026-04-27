@@ -1,0 +1,334 @@
+/*
+ * CHATTANOOGA COLLECTIVE — Design Tokens
+ * =========================================
+ * Import Google Fonts before using this file:
+ *
+ * Starving Dragon:
+ *   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+ *
+ * Collective / Ridge and Valley:
+ *   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+ *
+ * Note: Playfair Display and Lora are Google Fonts substitutes.
+ * If the brand acquires custom/licensed typefaces, replace here.
+ */
+
+/* ============================================================
+   STARVING DRAGON — Color Tokens
+   ============================================================ */
+:root {
+  /* --- Backgrounds --- */
+  --sd-bg:          #0d0703;   /* primary dark background */
+  --sd-bg-section:  #110904;   /* alternate section background */
+  --sd-bg-footer:   #080402;   /* footer / deepest dark */
+
+  /* --- Brand Accent --- */
+  --sd-accent:      #e8522a;   /* chili red-orange */
+  --sd-accent-dark: #c43d1a;   /* hover state */
+  --sd-accent-glow: rgba(200, 60, 10, 0.20);  /* radial glow */
+
+  /* --- Text Ramp (warm cream → deep muted) --- */
+  --sd-text-1:  #f5ede0;   /* primary text, headings */
+  --sd-text-2:  #c4aa8a;   /* secondary text, subheadings */
+  --sd-text-3:  #b89870;   /* body copy */
+  --sd-text-4:  #a88858;   /* muted body */
+  --sd-text-5:  #987848;   /* small labels, taglines */
+  --sd-text-6:  #886838;   /* very muted, captions */
+  --sd-text-7:  #705028;   /* copyright, fine print */
+
+  /* --- Borders --- */
+  --sd-border:       rgba(200, 80, 20, 0.12);   /* subtle warm border */
+  --sd-border-mid:   rgba(200, 80, 20, 0.20);   /* nav bottom, prominent */
+  --sd-border-hover: rgba(232, 82, 42, 0.40);   /* card hover */
+
+  /* --- Feature icon bg --- */
+  --sd-icon-bg:     rgba(232, 82, 42, 0.08);
+  --sd-icon-border: rgba(232, 82, 42, 0.18);
+}
+
+/* ============================================================
+   CHATTANOOGA COLLECTIVE — Color Tokens
+   Brand direction: Earthy & rustic, warm tones, farmers market
+   ============================================================ */
+:root {
+  /* --- Backgrounds --- */
+  --cc-bg:          #f5f0e8;   /* warm kraft / parchment */
+  --cc-bg-dark:     #2a2018;   /* deep wood / dark section */
+  --cc-bg-section:  #ede6d8;   /* slightly darker parchment */
+  --cc-bg-card:     #faf7f2;   /* card / floating element */
+
+  /* --- Brand Accents --- */
+  --cc-green:       #3a5c3a;   /* deep forest green — primary */
+  --cc-green-light: #5a8a4a;   /* lighter spring green */
+  --cc-ochre:       #c4831a;   /* warm ochre / harvest gold */
+  --cc-ochre-light: #e8a83a;   /* lighter ochre */
+  --cc-rust:        #a04520;   /* rust / terracotta — warmth */
+  --cc-rust-light:  #c86040;   /* lighter rust */
+
+  /* --- Text --- */
+  --cc-text-1:  #1e1a14;   /* near-black warm */
+  --cc-text-2:  #3d3020;   /* dark brown */
+  --cc-text-3:  #6a5438;   /* medium warm brown */
+  --cc-text-4:  #9a7d58;   /* muted tan */
+  --cc-text-5:  #bda882;   /* light muted */
+  --cc-text-inv: #f5f0e8;  /* inverted text (on dark bg) */
+
+  /* --- Borders --- */
+  --cc-border:       rgba(60, 40, 10, 0.12);
+  --cc-border-mid:   rgba(60, 40, 10, 0.22);
+  --cc-border-accent: rgba(164, 100, 32, 0.30);
+}
+
+/* ============================================================
+   RIDGE AND VALLEY — Color Tokens (proposed)
+   Brand direction: Functional wellness, botanical, apothecary
+   ============================================================ */
+:root {
+  /* --- Backgrounds --- */
+  --rv-bg:         #f2f5ee;   /* cool sage white */
+  --rv-bg-section: #e4ebe0;   /* light sage */
+  --rv-bg-dark:    #1e2a1e;   /* deep forest */
+  --rv-bg-card:    #ffffff;
+
+  /* --- Brand Accents --- */
+  --rv-sage:        #6b8c5a;   /* sage green — primary */
+  --rv-sage-dark:   #4a6340;   /* deeper sage */
+  --rv-mushroom:    #8a7060;   /* warm mushroom brown */
+  --rv-sea:         #4a7c8a;   /* sea vegetable teal */
+  --rv-turmeric:    #d4a020;   /* ayurvedic gold / turmeric */
+
+  /* --- Text --- */
+  --rv-text-1:  #1e2a1e;   /* deep forest */
+  --rv-text-2:  #3a4e30;   /* dark sage */
+  --rv-text-3:  #5c6e50;   /* medium sage */
+  --rv-text-4:  #8a9c7c;   /* muted */
+  --rv-text-inv: #f2f5ee;
+
+  /* --- Borders --- */
+  --rv-border: rgba(60, 80, 40, 0.14);
+}
+
+/* ============================================================
+   STARVING DRAGON — Typography
+   ============================================================ */
+:root {
+  /* Font families */
+  --sd-font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sd-font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Display / heading sizes */
+  --sd-text-hero:    clamp(52px, 9vw, 88px);
+  --sd-text-h1:      clamp(36px, 6vw, 60px);
+  --sd-text-h2:      clamp(28px, 4.5vw, 44px);
+  --sd-text-h3:      20px;
+  --sd-text-subtitle: clamp(18px, 3vw, 24px); /* italic Playfair */
+
+  /* Body sizes */
+  --sd-text-body-lg: 17px;
+  --sd-text-body:    15px;
+  --sd-text-sm:      14px;
+  --sd-text-xs:      13px;
+  --sd-text-label:   12px;
+  --sd-text-eyebrow: 11px;
+
+  /* Weights */
+  --sd-weight-light:   300;
+  --sd-weight-regular: 400;
+  --sd-weight-medium:  500;
+  --sd-weight-semibold: 600;
+  --sd-weight-bold:    700;
+  --sd-weight-black:   900;
+
+  /* Line heights */
+  --sd-lh-tight:  1;
+  --sd-lh-snug:   1.1;
+  --sd-lh-normal: 1.5;
+  --sd-lh-relaxed: 1.8;
+
+  /* Letter spacing */
+  --sd-ls-tight:  -0.02em;
+  --sd-ls-normal:  0;
+  --sd-ls-wide:    0.06em;
+  --sd-ls-wider:   0.1em;
+  --sd-ls-widest:  0.18em;
+  --sd-ls-eyebrow: 0.22em;
+}
+
+/* ============================================================
+   COLLECTIVE — Typography
+   ============================================================ */
+:root {
+  --cc-font-display: 'Lora', Georgia, 'Times New Roman', serif;
+  --cc-font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+
+  --cc-text-hero:    clamp(44px, 7vw, 72px);
+  --cc-text-h1:      clamp(32px, 5vw, 52px);
+  --cc-text-h2:      clamp(24px, 3.5vw, 38px);
+  --cc-text-h3:      22px;
+  --cc-text-body-lg: 18px;
+  --cc-text-body:    16px;
+  --cc-text-sm:      14px;
+  --cc-text-label:   12px;
+  --cc-text-eyebrow: 11px;
+}
+
+/* ============================================================
+   SHARED — Spacing, Radius, Shadow
+   ============================================================ */
+:root {
+  /* Spacing scale */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* Border radius */
+  --radius-sharp:  2px;   /* Starving Dragon style */
+  --radius-sm:     4px;
+  --radius-md:     6px;   /* Collective style */
+  --radius-lg:     12px;
+  --radius-full:   9999px;
+
+  /* Shadows — SD (almost none; glow-based) */
+  --sd-glow-sm:  0 0 30px rgba(200, 60, 10, 0.10);
+  --sd-glow-lg:  0 0 60px rgba(200, 60, 10, 0.15);
+
+  /* Shadows — CC (soft, warm) */
+  --cc-shadow-sm: 0 1px 4px rgba(30, 20, 10, 0.08);
+  --cc-shadow-md: 0 4px 16px rgba(30, 20, 10, 0.10);
+  --cc-shadow-lg: 0 8px 32px rgba(30, 20, 10, 0.12);
+}
+
+/* ============================================================
+   SEMANTIC — Starving Dragon Component Styles
+   ============================================================ */
+
+/* Buttons */
+.sd-btn-primary {
+  background: var(--sd-accent);
+  color: #fff;
+  border: none;
+  padding: 16px 36px;
+  font-family: var(--sd-font-body);
+  font-size: var(--sd-text-xs);
+  font-weight: var(--sd-weight-semibold);
+  letter-spacing: var(--sd-ls-wider);
+  text-transform: uppercase;
+  border-radius: var(--radius-sharp);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.sd-btn-primary:hover {
+  background: var(--sd-accent-dark);
+  transform: translateY(-1px);
+}
+
+.sd-btn-outline {
+  background: transparent;
+  color: var(--sd-text-2);
+  border: 1px solid rgba(196, 170, 138, 0.3);
+  padding: 16px 36px;
+  font-family: var(--sd-font-body);
+  font-size: var(--sd-text-xs);
+  font-weight: var(--sd-weight-semibold);
+  letter-spacing: var(--sd-ls-wider);
+  text-transform: uppercase;
+  border-radius: var(--radius-sharp);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.sd-btn-outline:hover {
+  border-color: var(--sd-text-2);
+  color: var(--sd-text-1);
+}
+
+/* Eyebrow label */
+.sd-eyebrow {
+  font-family: var(--sd-font-body);
+  font-size: var(--sd-text-eyebrow);
+  letter-spacing: var(--sd-ls-eyebrow);
+  text-transform: uppercase;
+  color: var(--sd-accent);
+  font-weight: var(--sd-weight-semibold);
+}
+
+/* Section divider bar */
+.sd-divider {
+  width: 44px;
+  height: 2px;
+  background: var(--sd-accent);
+  display: block;
+}
+
+/* Stat card */
+.sd-stat-card {
+  border-left: 2px solid var(--sd-accent);
+  padding-left: 24px;
+}
+
+/* ============================================================
+   SEMANTIC — Collective Component Styles
+   ============================================================ */
+
+.cc-btn-primary {
+  background: var(--cc-green);
+  color: var(--cc-text-inv);
+  border: none;
+  padding: 14px 32px;
+  font-family: var(--cc-font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.cc-btn-primary:hover {
+  background: var(--cc-green-light);
+  transform: translateY(-1px);
+}
+
+.cc-btn-outline {
+  background: transparent;
+  color: var(--cc-text-2);
+  border: 1.5px solid var(--cc-border-mid);
+  padding: 13px 30px;
+  font-family: var(--cc-font-body);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: border-color 0.2s, color 0.2s;
+}
+.cc-btn-outline:hover {
+  border-color: var(--cc-green);
+  color: var(--cc-green);
+}
+
+.cc-eyebrow {
+  font-family: var(--cc-font-body);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cc-ochre);
+  font-weight: 600;
+}

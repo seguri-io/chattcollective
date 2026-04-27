@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; padding: 28px 32px; display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+
+  /* Wordmark — horizontal */
+  .wordmark-h { display: flex; align-items: center; gap: 14px; }
+  .wordmark-icon {
+    width: 42px; height: 42px;
+    background: #3a5c3a;
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .wordmark-icon svg { width: 24px; height: 24px; }
+  .wordmark-text { display: flex; flex-direction: column; }
+  .wm-line1 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: #1e1a14; line-height: 1.1; letter-spacing: 0.01em; }
+  .wm-line2 { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #9a7d58; margin-top: 2px; }
+
+  /* Wordmark — stacked */
+  .wordmark-v {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 20px 24px;
+    border: 1px solid rgba(60,40,10,0.14);
+    border-radius: 4px;
+    background: #faf7f2;
+  }
+  .wm-v-icon {
+    width: 52px; height: 52px; background: #3a5c3a; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .wm-v-icon svg { width: 30px; height: 30px; }
+  .wm-v-name { font-family: 'Lora', serif; font-size: 20px; font-weight: 700; color: #1e1a14; text-align: center; letter-spacing: 0.01em; }
+  .wm-v-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #9a7d58; text-align: center; }
+
+  /* Wordmark — dark bg */
+  .wordmark-dark {
+    background: #2a2018; padding: 16px 20px; border-radius: 4px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .wm-d-icon { width: 36px; height: 36px; background: #c4831a; border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+  .wm-d-icon svg { width: 20px; height: 20px; }
+  .wm-d-name { font-family: 'Lora', serif; font-size: 16px; font-weight: 700; color: #f5f0e8; letter-spacing: 0.01em; }
+  .wm-d-sub { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: #bda882; }
+</style>
+</head>
+<body>
+  <!-- Horizontal wordmark -->
+  <div class="wordmark-h">
+    <div class="wordmark-icon">
+      <!-- Leaf / collective mark -->
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C12 3 5 7 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 7 12 3 12 3Z" fill="#f5f0e8" opacity="0.9"/>
+        <line x1="12" y1="20" x2="12" y2="22" stroke="#f5f0e8" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="12" y1="12" x2="9" y2="15" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="12" y1="10" x2="15" y2="13" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="wordmark-text">
+      <span class="wm-line1">Chattanooga Collective</span>
+      <span class="wm-line2">Cottage Food · Chattanooga, TN</span>
+    </div>
+  </div>
+
+  <!-- Stacked wordmark -->
+  <div class="wordmark-v">
+    <div class="wm-v-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C12 3 5 7 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 7 12 3 12 3Z" fill="#f5f0e8" opacity="0.9"/>
+        <line x1="12" y1="12" x2="9" y2="15" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="12" y1="10" x2="15" y2="13" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="wm-v-name">Chattanooga<br>Collective</span>
+    <span class="wm-v-sub">Chattanooga, TN</span>
+  </div>
+
+  <!-- Dark bg version -->
+  <div class="wordmark-dark">
+    <div class="wm-d-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C12 3 5 7 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 7 12 3 12 3Z" fill="#2a2018" opacity="0.9"/>
+        <line x1="12" y1="12" x2="9" y2="15" stroke="#2a2018" stroke-width="1.3" stroke-linecap="round"/>
+        <line x1="12" y1="10" x2="15" y2="13" stroke="#2a2018" stroke-width="1.3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <div class="wm-d-name">Chattanooga Collective</div>
+      <div class="wm-d-sub">Cottage Food · Chattanooga, TN</div>
+    </div>
+  </div>
+</body>
+</html>

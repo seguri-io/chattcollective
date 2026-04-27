@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Starving Dragon · UI Kit</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0d0703;
+  color: #f5ede0;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 48px;
+  background: rgba(13,7,3,0.96);
+  border-bottom: 1px solid rgba(200,80,20,0.2);
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.nav-logo { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 900; color: #e8522a; letter-spacing: 0.04em; text-decoration: none; }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { color: #c4aa8a; text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+.nav-links a:hover { color: #e8522a; }
+.nav-ig { display: flex; align-items: center; gap: 8px; color: #c4aa8a; text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; transition: color 0.2s; }
+.nav-ig:hover { color: #e8522a; }
+.nav-ig svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* HERO */
+.hero {
+  min-height: 88vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 80px 40px 90px;
+  background:
+    radial-gradient(ellipse at 50% 80%, rgba(200,60,10,0.20) 0%, transparent 65%),
+    radial-gradient(ellipse at 80% 10%, rgba(230,120,10,0.07) 0%, transparent 50%),
+    #0d0703;
+  position: relative;
+}
+.hero-logo {
+  width: 160px; height: 160px; border-radius: 50%;
+  border: 2px solid rgba(200,80,20,0.35);
+  overflow: hidden; margin-bottom: 36px;
+  box-shadow: 0 0 60px rgba(200,60,10,0.15);
+  background: #1a0a04;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-logo svg { width: 90px; height: 90px; }
+.hero-eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #e8522a; font-weight: 600; margin-bottom: 22px; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(52px, 9vw, 88px); font-weight: 900; line-height: 1; letter-spacing: -0.02em; margin-bottom: 10px; color: #f5ede0; }
+.hero h1 span { color: #e8522a; }
+.hero-sub { font-family: 'Playfair Display', serif; font-size: clamp(18px, 3vw, 24px); font-style: italic; color: #c4aa8a; margin-bottom: 14px; font-weight: 400; }
+.hero-tagline { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #987848; margin-bottom: 36px; font-weight: 500; }
+.hero-desc { max-width: 560px; font-size: 17px; line-height: 1.8; color: #c8a882; margin-bottom: 44px; }
+.cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: #e8522a; color: #fff; border: none; padding: 16px 36px; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: background 0.2s, transform 0.15s; text-decoration: none; display: inline-block; }
+.btn-primary:hover { background: #c43d1a; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: #c4aa8a; border: 1px solid rgba(196,170,138,0.3); padding: 16px 36px; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 2px; cursor: pointer; transition: border-color 0.2s, color 0.2s; text-decoration: none; display: inline-block; }
+.btn-outline:hover { border-color: #c4aa8a; color: #f5ede0; }
+
+/* SECTIONS */
+section { padding: 90px 48px; }
+.section-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #e8522a; font-weight: 600; margin-bottom: 14px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4.5vw, 44px); font-weight: 900; line-height: 1.1; color: #f5ede0; margin-bottom: 18px; }
+.divider { width: 44px; height: 2px; background: #e8522a; margin-bottom: 30px; }
+
+/* ORIGIN */
+.origin { background: #110904; border-top: 1px solid rgba(200,80,20,0.12); border-bottom: 1px solid rgba(200,80,20,0.12); }
+.origin-inner { max-width: 940px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.origin-text p { font-size: 15px; line-height: 1.85; color: #b89870; margin-bottom: 18px; }
+.origin-text p strong { color: #c4aa8a; font-weight: 500; }
+.origin-stats { display: flex; flex-direction: column; gap: 28px; }
+.stat-card { border-left: 2px solid #e8522a; padding-left: 24px; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: #e8522a; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 12px; color: #987848; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+
+/* CRISP */
+.crisp-section { max-width: 940px; margin: 0 auto; text-align: center; }
+.crisp-section .divider { margin: 0 auto 28px; }
+.crisp-intro { font-size: 17px; line-height: 1.8; color: #b89870; margin-bottom: 52px; max-width: 680px; margin-left: auto; margin-right: auto; }
+.crisp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(200,80,20,0.12); border: 1px solid rgba(200,80,20,0.12); }
+.crisp-card { background: #0d0703; padding: 40px 28px; text-align: left; }
+.crisp-icon { font-size: 28px; margin-bottom: 16px; display: block; }
+.crisp-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #f5ede0; margin-bottom: 12px; }
+.crisp-card p { font-size: 14px; line-height: 1.75; color: #a88858; }
+
+/* SICHUAN */
+.sichuan { background: #110904; border-top: 1px solid rgba(200,80,20,0.12); border-bottom: 1px solid rgba(200,80,20,0.12); }
+.sichuan-inner { max-width: 940px; margin: 0 auto; }
+.sichuan-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 8px; }
+.feature { display: flex; gap: 20px; }
+.feature-icon-wrap { width: 44px; height: 44px; border-radius: 2px; background: rgba(232,82,42,0.08); border: 1px solid rgba(232,82,42,0.18); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; }
+.feature-content h4 { font-size: 14px; font-weight: 600; color: #c4aa8a; margin-bottom: 7px; }
+.feature-content p { font-size: 13px; line-height: 1.7; color: #987848; }
+
+/* FLAVOR */
+.flavor-wrap { max-width: 940px; margin: 0 auto; }
+.flavor-bar-wrap { margin-top: 48px; display: flex; flex-direction: column; gap: 20px; }
+.flavor-row { display: flex; align-items: center; gap: 20px; }
+.flavor-name { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #a88858; width: 90px; flex-shrink: 0; }
+.flavor-bar-bg { flex: 1; height: 3px; background: rgba(200,80,20,0.12); border-radius: 2px; overflow: hidden; }
+.flavor-bar-fill { height: 100%; border-radius: 2px; background: #e8522a; }
+.flavor-val { font-size: 11px; color: #e8522a; font-weight: 600; width: 30px; text-align: right; }
+
+/* PAIRINGS */
+.pairings { background: #110904; border-top: 1px solid rgba(200,80,20,0.12); }
+.pairings-inner { max-width: 940px; margin: 0 auto; }
+.pairings-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+.pairing-card { background: #0d0703; border: 1px solid rgba(200,80,20,0.12); padding: 28px 20px; text-align: center; transition: border-color 0.25s; }
+.pairing-card:hover { border-color: rgba(232,82,42,0.4); }
+.pairing-emoji { font-size: 30px; margin-bottom: 12px; display: block; }
+.pairing-card h4 { font-size: 13px; font-weight: 600; color: #c4aa8a; margin-bottom: 8px; }
+.pairing-card p { font-size: 12px; line-height: 1.6; color: #886838; }
+
+/* INGREDIENTS */
+.ingredients-wrap { max-width: 940px; margin: 0 auto; }
+.ing-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(200,80,20,0.12); border: 1px solid rgba(200,80,20,0.12); margin-top: 48px; }
+.ing-item { background: #0d0703; padding: 28px 24px; display: flex; align-items: flex-start; gap: 16px; }
+.ing-dot { width: 7px; height: 7px; border-radius: 50%; background: #e8522a; margin-top: 6px; flex-shrink: 0; }
+.ing-item h4 { font-size: 14px; font-weight: 600; color: #c4aa8a; margin-bottom: 5px; }
+.ing-item p { font-size: 12px; line-height: 1.65; color: #886838; }
+
+/* QUOTE */
+.quote-section { text-align: center; padding: 80px 40px; background: rgba(232,82,42,0.03); border-top: 1px solid rgba(200,80,20,0.12); border-bottom: 1px solid rgba(200,80,20,0.12); }
+.big-quote { font-family: 'Playfair Display', serif; font-size: clamp(22px, 4vw, 36px); font-style: italic; line-height: 1.5; color: #c4aa8a; max-width: 720px; margin: 0 auto 22px; font-weight: 400; }
+.quote-attr { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #886838; font-weight: 500; }
+
+/* ORDER */
+.order-section { max-width: 700px; margin: 0 auto; text-align: center; }
+.order-section .divider { margin: 0 auto 28px; }
+.order-desc { font-size: 16px; line-height: 1.8; color: #b89870; margin-bottom: 36px; }
+.order-note { font-size: 12px; color: #705028; margin-top: 18px; letter-spacing: 0.06em; }
+
+/* FOOTER */
+footer { background: #080402; padding: 48px; border-top: 1px solid rgba(200,80,20,0.12); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; color: #e8522a; }
+.footer-sub { font-size: 11px; color: #886838; margin-top: 4px; letter-spacing: 0.07em; text-transform: uppercase; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; text-align: right; }
+.footer-links a { color: #886838; text-decoration: none; font-size: 13px; transition: color 0.2s; }
+.footer-links a:hover { color: #c4aa8a; }
+.footer-copy { font-size: 11px; color: #705028; letter-spacing: 0.07em; text-align: center; width: 100%; border-top: 1px solid rgba(200,80,20,0.08); padding-top: 20px; margin-top: 4px; }
+
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  section { padding: 60px 24px; }
+  .origin-inner { grid-template-columns: 1fr; gap: 48px; }
+  .crisp-grid { grid-template-columns: 1fr; }
+  .sichuan-features { grid-template-columns: 1fr; gap: 28px; }
+  .pairings-grid { grid-template-columns: repeat(2, 1fr); }
+  .ing-list { grid-template-columns: 1fr; }
+  footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+  .footer-links { text-align: left; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Starving Dragon</a>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#crisp">The Oil</a></li>
+    <li><a href="#pairings">Pairings</a></li>
+    <li><a href="#order">Order</a></li>
+  </ul>
+  <a href="https://instagram.com/starvingdragonoil" class="nav-ig" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+      <circle cx="12" cy="12" r="5"/>
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+    </svg>
+    @starvingdragonoil
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Craft-batch · Chattanooga, TN · Since 2026</p>
+  <div class="hero-logo">
+    <img src="../../assets/starving-dragon-logo.png" alt="Starving Dragon Chili Crisp Oil" style="width:100%;height:100%;object-fit:cover;" />
+  </div>
+  <p class="hero-eyebrow">Craft-batch · Chattanooga, TN · Since 2026</p>
+  <h1>Starving <span>Dragon</span></h1>
+  <p class="hero-sub">Sichuan Chili Crisp Oil</p>
+  <p class="hero-tagline">Spewing heat since 2026</p>
+  <p class="hero-desc">
+    Craft-batch Sichuan chili crisp, hand-crafted in Chattanooga, TN.
+    100% hot oil drizzled. Complex heat, fragrant aromatics, satisfying crunch.
+  </p>
+  <div class="cta-row">
+    <a href="#order" class="btn-primary">Order Yours</a>
+    <a href="#crisp" class="btn-outline">The Oil</a>
+  </div>
+</div>
+
+<!-- ORIGIN -->
+<section class="origin" id="story">
+  <div class="origin-inner">
+    <div class="origin-text">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Born from Heat,<br>Built in Chattanooga</h2>
+      <div class="divider"></div>
+      <p>What started as a <strong>deep obsession with Sichuan cuisine</strong> became something we couldn't keep to ourselves. Every batch is made in small quantities, cooked slow to build depth and layered heat that you simply can't rush.</p>
+      <p>We source our chilies for maximum complexity — not just fire, but the numbing, fragrant quality that defines <strong>real Sichuan chili crisp</strong>. No shortcuts. No compromises.</p>
+    </div>
+    <div class="origin-stats">
+      <div class="stat-card">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Small Batch</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">CHI</div>
+        <div class="stat-label">Sichuan Heritage</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">CHA</div>
+        <div class="stat-label">Made in Chattanooga</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT IS CHILI CRISP -->
+<section id="crisp">
+  <div class="crisp-section">
+    <p class="section-label">The Oil</p>
+    <h2 class="section-title">What Is Chili Crisp?</h2>
+    <div class="divider"></div>
+    <p class="crisp-intro">
+      Chili crisp is the everything condiment — spicy, savory, crunchy, fragrant. Born in Sichuan province, it's a slow-cooked oil infused with dried chilies, fried aromatics, and warm spices. Once you try it, everything else tastes incomplete.
+    </p>
+    <div class="crisp-grid">
+      <div class="crisp-card">
+        <span class="crisp-icon">🌶️</span>
+        <h3>The Heat</h3>
+        <p>Sichuan chilies deliver complex, layered heat — not just fire, but a warm, slow burn that builds and lingers pleasantly.</p>
+      </div>
+      <div class="crisp-card">
+        <span class="crisp-icon">✦</span>
+        <h3>The Crisp</h3>
+        <p>Fried shallots, garlic, and aromatics suspended in oil give every spoonful a satisfying crunch that sets it apart from plain hot sauce.</p>
+      </div>
+      <div class="crisp-card">
+        <span class="crisp-icon">🛢️</span>
+        <h3>The Oil</h3>
+        <p>The base is everything. Slow-infused at low heat to extract maximum fragrance without bitterness. Rich, golden, deeply savory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SICHUAN HERITAGE -->
+<section class="sichuan">
+  <div class="sichuan-inner">
+    <p class="section-label">Sichuan Heritage</p>
+    <h2 class="section-title">Why Sichuan?</h2>
+    <div class="divider"></div>
+    <div class="sichuan-features">
+      <div class="feature">
+        <div class="feature-icon-wrap">🔥</div>
+        <div class="feature-content">
+          <h4>Málà — Numbing Heat</h4>
+          <p>The defining character of Sichuan cuisine: the tingly, numbing sensation from Sichuan peppercorns paired with chili heat. Nothing else quite like it.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon-wrap">🫙</div>
+        <div class="feature-content">
+          <h4>Centuries of Craft</h4>
+          <p>Chili crisp has evolved over hundreds of years in Sichuan province, perfected by generations of cooks who understood that great condiments take time.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon-wrap">🌿</div>
+        <div class="feature-content">
+          <h4>Aromatic Complexity</h4>
+          <p>Star anise, bay leaf, cinnamon, and cardamom layer underneath the chili heat, creating a depth of flavor that makes this oil uniquely addictive.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon-wrap">⚡</div>
+        <div class="feature-content">
+          <h4>Versatile by Design</h4>
+          <p>Drizzle on eggs, noodles, dumplings, pizza, avocado toast — chili crisp belongs on everything. Once you start, you won't stop.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLAVOR PROFILE -->
+<section>
+  <div class="flavor-wrap">
+    <p class="section-label">Flavor Profile</p>
+    <h2 class="section-title">What to Expect</h2>
+    <div class="divider"></div>
+    <div class="flavor-bar-wrap">
+      <div class="flavor-row">
+        <span class="flavor-name">Heat</span>
+        <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width:78%"></div></div>
+        <span class="flavor-val">78</span>
+      </div>
+      <div class="flavor-row">
+        <span class="flavor-name">Umami</span>
+        <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width:88%"></div></div>
+        <span class="flavor-val">88</span>
+      </div>
+      <div class="flavor-row">
+        <span class="flavor-name">Numbing</span>
+        <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width:55%"></div></div>
+        <span class="flavor-val">55</span>
+      </div>
+      <div class="flavor-row">
+        <span class="flavor-name">Savory</span>
+        <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width:92%"></div></div>
+        <span class="flavor-val">92</span>
+      </div>
+      <div class="flavor-row">
+        <span class="flavor-name">Fragrance</span>
+        <div class="flavor-bar-bg"><div class="flavor-bar-fill" style="width:85%"></div></div>
+        <span class="flavor-val">85</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIRINGS -->
+<section class="pairings" id="pairings">
+  <div class="pairings-inner">
+    <p class="section-label">Pairings</p>
+    <h2 class="section-title">Goes On Everything</h2>
+    <div class="divider"></div>
+    <div class="pairings-grid">
+      <div class="pairing-card">
+        <span class="pairing-emoji">🥚</span>
+        <h4>Eggs</h4>
+        <p>Fried, scrambled, soft-boiled. Chili crisp belongs on every egg.</p>
+      </div>
+      <div class="pairing-card">
+        <span class="pairing-emoji">🍜</span>
+        <h4>Noodles</h4>
+        <p>Ramen, pasta, rice noodles — drizzle generously and toss.</p>
+      </div>
+      <div class="pairing-card">
+        <span class="pairing-emoji">🥑</span>
+        <h4>Avocado Toast</h4>
+        <p>It sounds basic until you try it. Trust us on this one.</p>
+      </div>
+      <div class="pairing-card">
+        <span class="pairing-emoji">🍕</span>
+        <h4>Pizza</h4>
+        <p>A drizzle over hot pizza is a revelation. You've been warned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section>
+  <div class="ingredients-wrap">
+    <p class="section-label">Ingredients</p>
+    <h2 class="section-title">What's Inside</h2>
+    <div class="divider"></div>
+    <div class="ing-list">
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Sichuan Chilies</h4><p>Sun-dried and selected for heat and complexity, not just Scoville.</p></div></div>
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Fried Shallots</h4><p>Slow-fried to golden, caramelized sweetness that balances the heat.</p></div></div>
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Sichuan Peppercorn</h4><p>The source of málà — that electric, citrusy numbness.</p></div></div>
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Neutral Oil</h4><p>High-quality base oil, infused slowly at low heat for maximum flavor.</p></div></div>
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Fermented Black Bean</h4><p>Deep, savory umami backbone that elevates every other ingredient.</p></div></div>
+      <div class="ing-item"><div class="ing-dot"></div><div><h4>Warm Spices</h4><p>Star anise, bay leaf, cinnamon — subtle, fragrant, essential.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <p class="big-quote">"Once you put it on eggs, you'll put it on everything. There's no going back."</p>
+  <p class="quote-attr">— Every Starving Dragon convert</p>
+</div>
+
+<!-- ORDER -->
+<section id="order">
+  <div class="order-section">
+    <p class="section-label">Order</p>
+    <h2 class="section-title">Get Your Jar</h2>
+    <div class="divider"></div>
+    <p class="order-desc">
+      Currently available via Instagram DM and local Chattanooga pickup. Follow us at @starvingdragonoil for drop announcements and availability updates.
+    </p>
+    <div class="cta-row" style="justify-content:center">
+      <a href="https://instagram.com/starvingdragonoil" class="btn-primary" target="_blank">Order on Instagram</a>
+    </div>
+    <p class="order-note">Chattanooga, TN pickup only · Small batch — limited availability</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Starving Dragon</div>
+    <div class="footer-sub">Chattanooga, TN · Est. 2026</div>
+  </div>
+  <div class="footer-links">
+    <a href="#story">Our Story</a>
+    <a href="#crisp">The Oil</a>
+    <a href="https://instagram.com/starvingdragonoil" target="_blank">@starvingdragonoil</a>
+  </div>
+  <div class="footer-copy">© 2026 Starving Dragon · All rights reserved · Chattanooga Collective member</div>
+</footer>
+
+</body>
+</html>

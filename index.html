@@ -1,0 +1,96 @@
+---
+layout: home
+title: Chattanooga Collective
+description: Two Chattanooga makers. One front door. Cottage food made by your neighbors under Tennessee's Domestic Kitchen rules.
+permalink: /
+---
+<section class="hero" aria-labelledby="hero-title">
+  <p class="eyebrow">Cottage Food · Chattanooga, TN</p>
+  <h1 class="hero__title" id="hero-title">
+    Two Chattanooga makers.<br>
+    <em>One front door.</em>
+  </h1>
+  <p class="hero__sub">Homemade goods, made by your neighbors.</p>
+  <p class="hero__desc">
+    Chattanooga Collective is a small group of independent cottage food makers cooking and bottling out of our home kitchens. Each of us runs our own thing — we band together so it&rsquo;s easier for you to find us.
+  </p>
+  <div class="hero__cta">
+    <a href="{{ '/vendors/' | relative_url }}" class="btn btn--primary">Meet the Vendors</a>
+    <a href="{{ '/about/' | relative_url }}" class="btn btn--ghost">About the Collective</a>
+  </div>
+</section>
+
+<section class="cc-section cc-section--alt" id="vendors" aria-labelledby="vendors-heading">
+  <div class="cc-section__inner">
+    {% include section_header.html eyebrow="Member Vendors" title="The Collective" %}
+    <p class="lede">Two makers, two distinct kitchens. Each runs their own thing — order direct from the maker.</p>
+    <div class="vendor-grid">
+      {%- assign vendors_sorted = site.vendors | sort: 'order' -%}
+      {%- for v in vendors_sorted -%}
+        {% include vendor_card.html vendor=v %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section class="cc-section" id="why" aria-labelledby="why-heading">
+  <div class="cc-section__inner">
+    {% include section_header.html eyebrow="Why a Collective?" title="Independent, together." center=true %}
+    <div class="prose" style="margin: 0 auto; text-align: center;">
+      <p>Cottage food making is personal work. Each maker pours real care into what they do — but being found, trusted, and remembered is hard to do alone.</p>
+      <p><strong>The Collective is the front door, not a parent company.</strong> Each vendor runs their own kitchen, sets their own prices, and handles their own orders. We pool our reach so neighbors can find us.</p>
+      <p>Everything sold through the Collective is made locally, in small batches, by hand.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cc-section cc-section--alt" id="values" aria-labelledby="values-heading">
+  <div class="cc-section__inner">
+    {% include section_header.html eyebrow="What we stand for" title="The short version." %}
+    <div class="values-grid">
+      <article class="values-grid__item">
+        <svg class="values-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
+        </svg>
+        <h3>Real ingredients</h3>
+        <p>No fillers, no shortcuts. Ingredients you can recognize, sourced as locally as the recipe allows.</p>
+      </article>
+      <article class="values-grid__item">
+        <svg class="values-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <h3>Made in Chattanooga</h3>
+        <p>Made in home kitchens by people who live here, under Tennessee&rsquo;s Domestic Kitchen rules. Buying from us is buying from a neighbor.</p>
+      </article>
+      <article class="values-grid__item">
+        <svg class="values-grid__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <h3>Independent, together</h3>
+        <p>Each vendor runs their own kitchen and brand. The Collective is a directory and a front door — never a layer between you and the maker.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cc-section" id="find" aria-labelledby="find-heading">
+  <div class="cc-section__inner">
+    {% include section_header.html eyebrow="Find Us" title="Saturdays at the HiLo Market." %}
+
+    <aside class="stat-card market-card">
+      <p class="eyebrow">Every Saturday</p>
+      <p class="stat-card__value">HiLo Market &mdash; Highland Park</p>
+      <p class="stat-card__sub">9am &ndash; 12pm &middot; Chattanooga, TN</p>
+    </aside>
+
+    <div class="prose" style="margin-top: var(--space-8);">
+      <p>Most Saturday mornings you can find us at the <strong>Highland Park Farmers Market</strong>. Stop by, taste what we&rsquo;re making, and pick up an order without the back-and-forth.</p>
+      <p>Schedules can shift week to week — for a specific vendor or product, check their page first. <a href="{{ '/contact/' | relative_url }}">More on where to find us &rarr;</a></p>
+    </div>
+  </div>
+</section>

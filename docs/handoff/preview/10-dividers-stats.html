@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,400&family=Inter:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0703; padding: 28px 32px; display: flex; flex-direction: column; gap: 28px; }
+
+  /* Eyebrow + divider + section title pattern */
+  .block { display: flex; flex-direction: column; gap: 10px; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #e8522a; font-weight: 600; }
+  .divider { width: 44px; height: 2px; background: #e8522a; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #f5ede0; line-height: 1.1; }
+
+  /* Flavor bars */
+  .flavor-section { display: flex; flex-direction: column; gap: 12px; }
+  .flavor-row { display: flex; align-items: center; gap: 16px; }
+  .flavor-name { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #a88858; width: 75px; flex-shrink: 0; }
+  .bar-bg { flex: 1; height: 3px; background: rgba(200,80,20,0.12); border-radius: 2px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 2px; background: #e8522a; }
+  .bar-val { font-family: 'Inter', sans-serif; font-size: 11px; color: #e8522a; font-weight: 600; width: 28px; text-align: right; }
+
+  /* Big quote */
+  .big-quote { font-family: 'Playfair Display', serif; font-size: 22px; font-style: italic; line-height: 1.55; color: #c4aa8a; font-weight: 400; border-top: 1px solid rgba(200,80,20,0.12); padding-top: 24px; }
+  .quote-attr { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #886838; font-weight: 500; margin-top: 10px; }
+</style>
+</head>
+<body>
+  <div class="block">
+    <span class="eyebrow">The Oil</span>
+    <div class="divider"></div>
+    <h2 class="section-title">Flavor Profile</h2>
+  </div>
+
+  <div class="flavor-section">
+    <div class="flavor-row">
+      <span class="flavor-name">Heat</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:82%"></div></div>
+      <span class="bar-val">82</span>
+    </div>
+    <div class="flavor-row">
+      <span class="flavor-name">Umami</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:75%"></div></div>
+      <span class="bar-val">75</span>
+    </div>
+    <div class="flavor-row">
+      <span class="flavor-name">Numbing</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:60%"></div></div>
+      <span class="bar-val">60</span>
+    </div>
+    <div class="flavor-row">
+      <span class="flavor-name">Savory</span>
+      <div class="bar-bg"><div class="bar-fill" style="width:90%"></div></div>
+      <span class="bar-val">90</span>
+    </div>
+  </div>
+
+  <div>
+    <p class="big-quote">"Chili crisp changed everything. Now nothing else will do."</p>
+    <p class="quote-attr">— A convert</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chattanooga Collective</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: #f5f0e8; color: #1e1a14; overflow-x: hidden; }
+
+/* ── NAV ── */
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 48px;
+  background: rgba(245,240,232,0.96);
+  border-bottom: 1px solid rgba(60,40,10,0.12);
+  position: sticky; top: 0; z-index: 100;
+  backdrop-filter: blur(8px);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-icon { width: 32px; height: 32px; background: #3a5c3a; border-radius: 4px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.nav-logo-icon svg { width: 18px; height: 18px; }
+.nav-logo-text { font-family: 'Lora', serif; font-size: 16px; font-weight: 700; color: #1e1a14; letter-spacing: 0.01em; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { color: #6a5438; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.04em; transition: color 0.2s; }
+.nav-links a:hover { color: #3a5c3a; }
+.nav-cta { background: #3a5c3a; color: #f5f0e8; border: none; padding: 10px 22px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: #5a8a4a; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 85vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 80px 40px;
+  background:
+    radial-gradient(ellipse at 60% 30%, rgba(90,138,74,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse at 30% 70%, rgba(196,131,26,0.08) 0%, transparent 50%),
+    #f5f0e8;
+  position: relative;
+}
+.hero-eyebrow { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #c4831a; font-weight: 600; margin-bottom: 20px; }
+.hero h1 { font-family: 'Lora', serif; font-size: clamp(44px, 7vw, 72px); font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 12px; color: #1e1a14; }
+.hero h1 em { font-style: italic; color: #3a5c3a; }
+.hero-sub { font-family: 'Lora', serif; font-size: clamp(16px, 2.5vw, 20px); font-style: italic; color: #6a5438; margin-bottom: 28px; font-weight: 400; }
+.hero-desc { max-width: 540px; font-size: 16px; line-height: 1.8; color: #6a5438; margin-bottom: 40px; }
+.cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: #3a5c3a; color: #f5f0e8; border: none; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
+.btn-primary:hover { background: #5a8a4a; transform: translateY(-1px); }
+.btn-outline { background: transparent; color: #3d3020; border: 1.5px solid rgba(60,40,10,0.22); padding: 13px 30px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s, color 0.2s; }
+.btn-outline:hover { border-color: #3a5c3a; color: #3a5c3a; }
+
+/* ── SECTION COMMON ── */
+section { padding: 90px 48px; }
+.section-label { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #c4831a; font-weight: 600; margin-bottom: 12px; }
+.section-title { font-family: 'Lora', serif; font-size: clamp(26px, 4vw, 40px); font-weight: 700; line-height: 1.15; color: #1e1a14; margin-bottom: 16px; }
+.cc-divider { width: 40px; height: 2px; background: #c4831a; margin-bottom: 28px; }
+
+/* ── VENDORS ── */
+.vendors { background: #ede6d8; border-top: 1px solid rgba(60,40,10,0.1); border-bottom: 1px solid rgba(60,40,10,0.1); }
+.vendors-inner { max-width: 960px; margin: 0 auto; }
+.vendors-intro { font-size: 17px; line-height: 1.8; color: #6a5438; max-width: 620px; margin-bottom: 52px; }
+.vendor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.vendor-card {
+  background: #faf7f2; border: 1px solid rgba(60,40,10,0.1);
+  border-radius: 6px; padding: 36px 32px;
+  box-shadow: 0 2px 12px rgba(30,20,10,0.06);
+  display: flex; flex-direction: column; gap: 0;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+.vendor-card:hover { box-shadow: 0 6px 24px rgba(30,20,10,0.10); transform: translateY(-2px); }
+.vc-badge { font-family: 'DM Sans', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 12px; display: inline-block; padding: 4px 10px; border-radius: 3px; }
+.vc-badge-fire { background: rgba(232,82,42,0.10); color: #e8522a; }
+.vc-badge-sage { background: rgba(107,140,90,0.12); color: #4a6340; }
+.vc-name { font-family: 'Lora', serif; font-size: 24px; font-weight: 700; color: #1e1a14; margin-bottom: 8px; }
+.vc-tagline { font-family: 'Lora', serif; font-style: italic; font-size: 14px; color: #9a7d58; margin-bottom: 16px; }
+.vc-desc { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.75; color: #6a5438; margin-bottom: 24px; flex: 1; }
+.vc-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.vc-tag { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; color: #9a7d58; background: #ede6d8; border-radius: 3px; padding: 4px 10px; }
+.vc-link { font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.vc-link-fire { color: #e8522a; }
+.vc-link-sage { color: #3a5c3a; }
+.vc-link:hover { opacity: 0.75; }
+/* Starving Dragon card accent */
+.vc-sd { border-top: 3px solid #e8522a; }
+.vc-rv { border-top: 3px solid #6b8c5a; }
+
+/* ── ABOUT COLLECTIVE ── */
+.about-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.about-inner .cc-divider { margin: 0 auto 28px; }
+.about-body { font-size: 17px; line-height: 1.85; color: #6a5438; margin-bottom: 20px; }
+.about-body strong { color: #3d3020; font-weight: 600; }
+
+/* ── VALUES ── */
+.values { background: #ede6d8; border-top: 1px solid rgba(60,40,10,0.1); }
+.values-inner { max-width: 960px; margin: 0 auto; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(60,40,10,0.10); border: 1px solid rgba(60,40,10,0.10); margin-top: 48px; }
+.value-card { background: #ede6d8; padding: 36px 28px; }
+.value-icon { font-size: 26px; margin-bottom: 14px; display: block; }
+.value-card h3 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: #1e1a14; margin-bottom: 10px; }
+.value-card p { font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.75; color: #6a5438; }
+
+/* ── LOCATION ── */
+.location-inner { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.location-text p { font-size: 15px; line-height: 1.85; color: #6a5438; margin-bottom: 16px; }
+.location-text p strong { color: #3d3020; font-weight: 600; }
+.location-map {
+  background: #ede6d8; border: 1px solid rgba(60,40,10,0.12);
+  border-radius: 6px; height: 240px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'DM Sans', sans-serif; font-size: 13px; color: #9a7d58;
+  flex-direction: column; gap: 10px;
+}
+.location-map svg { width: 36px; height: 36px; color: #c4831a; }
+
+/* ── FOOTER ── */
+footer {
+  background: #2a2018; padding: 48px;
+  border-top: 1px solid rgba(60,40,10,0.3);
+  display: flex; justify-content: space-between; align-items: flex-start;
+  flex-wrap: wrap; gap: 32px;
+}
+.footer-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.footer-logo-icon { width: 28px; height: 28px; background: #c4831a; border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+.footer-logo-icon svg { width: 16px; height: 16px; }
+.footer-brand { font-family: 'Lora', serif; font-size: 16px; font-weight: 700; color: #f5f0e8; }
+.footer-sub { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #9a7d58; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+.footer-col h4 { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #9a7d58; margin-bottom: 14px; }
+.footer-col a { display: block; font-family: 'DM Sans', sans-serif; color: #bda882; text-decoration: none; font-size: 13px; margin-bottom: 8px; transition: color 0.2s; }
+.footer-col a:hover { color: #f5f0e8; }
+.footer-copy { font-family: 'DM Sans', sans-serif; font-size: 11px; color: #6a5438; letter-spacing: 0.06em; text-align: center; width: 100%; border-top: 1px solid rgba(245,240,232,0.06); padding-top: 20px; margin-top: 8px; }
+
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links { display: none; }
+  section { padding: 60px 24px; }
+  .vendor-grid { grid-template-columns: 1fr; }
+  .values-grid { grid-template-columns: 1fr; }
+  .location-inner { grid-template-columns: 1fr; gap: 36px; }
+  footer { padding: 32px 24px; flex-direction: column; }
+}
+
+/* leaf icon path helper */
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C12 3 5 7 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 7 12 3 12 3Z" fill="#f5f0e8" opacity="0.9"/>
+        <line x1="12" y1="12" x2="9" y2="15" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+        <line x1="12" y1="10" x2="15" y2="13" stroke="#3a5c3a" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="nav-logo-text">Chattanooga Collective</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#vendors">Our Vendors</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#find">Find Us</a></li>
+  </ul>
+  <a href="#vendors" class="nav-cta">Shop Local</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">Cottage Food · Chattanooga, TN</p>
+  <h1>Local makers.<br><em>Real flavor.</em></h1>
+  <p class="hero-sub">Handcrafted cottage food, made with intention.</p>
+  <p class="hero-desc">
+    The Chattanooga Collective brings together independent cottage food makers from the Tennessee Valley — bold flavors, functional ingredients, and the kind of care that only comes from small-batch craft.
+  </p>
+  <div class="cta-row">
+    <a href="#vendors" class="btn-primary">Meet the Makers</a>
+    <a href="#about" class="btn-outline">Our Story</a>
+  </div>
+</div>
+
+<!-- VENDORS -->
+<section class="vendors" id="vendors">
+  <div class="vendors-inner">
+    <p class="section-label">Member Vendors</p>
+    <h2 class="section-title">The Collective</h2>
+    <div class="cc-divider"></div>
+    <p class="vendors-intro">
+      Two makers, two distinct worlds of flavor — united by a commitment to craft, locality, and the belief that food made with care tastes better.
+    </p>
+    <div class="vendor-grid">
+
+      <!-- Starving Dragon -->
+      <div class="vendor-card vc-sd">
+        <span class="vc-badge vc-badge-fire">Sichuan · Chili Oil</span>
+        <div class="vc-name">Starving Dragon</div>
+        <div class="vc-tagline">Spewing heat since 2026</div>
+        <p class="vc-desc">
+          Craft-batch Sichuan chili crisp oil, slow-cooked and hand-packed in Chattanooga, TN. Complex numbing heat, fragrant aromatics, and a satisfying crunch that makes everything taste better.
+        </p>
+        <div class="vc-tags">
+          <span class="vc-tag">Chili Crisp</span>
+          <span class="vc-tag">Small Batch</span>
+          <span class="vc-tag">Sichuan</span>
+          <span class="vc-tag">Vegan</span>
+        </div>
+        <a href="https://instagram.com/starvingdragonoil" class="vc-link vc-link-fire" target="_blank">
+          Order on Instagram →
+        </a>
+      </div>
+
+      <!-- Ridge and Valley -->
+      <div class="vendor-card vc-rv">
+        <span class="vc-badge vc-badge-sage">Functional · Allergen-Free</span>
+        <div class="vc-name">Ridge and Valley</div>
+        <div class="vc-tagline">Nourishment that doesn't compromise</div>
+        <p class="vc-desc">
+          Allergen-free foods enriched with functional superfoods — sea vegetables, adaptogenic mushrooms, and ayurvedic spices. Foods that nourish deeply and taste just as good (or better) than the conventional alternative.
+        </p>
+        <div class="vc-tags">
+          <span class="vc-tag">Allergen-Free</span>
+          <span class="vc-tag">Superfoods</span>
+          <span class="vc-tag">Adaptogens</span>
+          <span class="vc-tag">Ayurvedic</span>
+        </div>
+        <a href="#" class="vc-link vc-link-sage">
+          Coming Soon →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <p class="section-label">About</p>
+    <h2 class="section-title">Why a Collective?</h2>
+    <div class="cc-divider"></div>
+    <p class="about-body">
+      Cottage food making is a deeply personal craft. Each maker pours genuine care into what they create — but building a presence, finding customers, and showing up consistently is hard to do alone. <strong>The Chattanooga Collective exists to change that.</strong>
+    </p>
+    <p class="about-body">
+      By pooling our presence and supporting one another, we can each focus on what we do best — making exceptional food — while the Collective handles the shared work of being found, trusted, and remembered.
+    </p>
+    <p class="about-body">
+      We're rooted in Chattanooga, TN. Everything sold through this collective is <strong>made locally, in small batches, with real ingredients</strong>.
+    </p>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="values-inner">
+    <p class="section-label">Our Values</p>
+    <h2 class="section-title">What We Stand For</h2>
+    <div class="cc-divider"></div>
+    <div class="values-grid">
+      <div class="value-card">
+        <span class="value-icon">🌿</span>
+        <h3>Real Ingredients</h3>
+        <p>No fillers, no shortcuts. Every product in the Collective uses ingredients you can recognize and trust.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">🏡</span>
+        <h3>Local Craft</h3>
+        <p>Made in Chattanooga kitchens by people who live here. Supporting the Collective means supporting your neighbors.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-icon">✦</span>
+        <h3>Community First</h3>
+        <p>We believe small makers are stronger together. The Collective is built on mutual support, not competition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIND US -->
+<section id="find">
+  <div class="location-inner">
+    <div class="location-text">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-title">Rooted in Chattanooga</h2>
+      <div class="cc-divider"></div>
+      <p>All Collective products are available for <strong>local pickup in Chattanooga, TN</strong>. We operate under Tennessee cottage food law and sell direct-to-consumer.</p>
+      <p>Follow our vendors on Instagram for pickup availability, pop-up locations, and new product drops.</p>
+      <div class="cta-row" style="justify-content:flex-start; margin-top: 24px;">
+        <a href="https://instagram.com/starvingdragonoil" class="btn-primary" target="_blank">@starvingdragonoil</a>
+      </div>
+    </div>
+    <div class="location-map">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5"/>
+      </svg>
+      <span>Chattanooga, Tennessee</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">
+      <div class="footer-logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3C12 3 5 7 5 13C5 16.866 8.134 20 12 20C15.866 20 19 16.866 19 13C19 7 12 3 12 3Z" fill="#2a2018" opacity="0.9"/>
+        </svg>
+      </div>
+      <span class="footer-brand">Chattanooga Collective</span>
+    </div>
+    <div class="footer-sub">Chattanooga, TN · Cottage Food</div>
+  </div>
+  <div class="footer-col">
+    <h4>Vendors</h4>
+    <a href="https://instagram.com/starvingdragonoil" target="_blank">Starving Dragon</a>
+    <a href="#">Ridge and Valley</a>
+  </div>
+  <div class="footer-col">
+    <h4>Collective</h4>
+    <a href="#about">About</a>
+    <a href="#find">Find Us</a>
+    <a href="#">Join the Collective</a>
+  </div>
+  <div class="footer-copy">© 2026 Chattanooga Collective · All rights reserved · Tennessee Cottage Food Law compliant</div>
+</footer>
+
+</body>
+</html>

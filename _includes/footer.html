@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="site-footer__brand">
+    <div class="site-footer__logo">
+      <span class="site-footer__mark" aria-hidden="true">✦</span>
+      <span class="site-footer__name">Chattanooga Collective</span>
+    </div>
+    <p class="site-footer__sub">Chattanooga, TN · Cottage Food</p>
+  </div>
+
+  <div class="site-footer__col">
+    <h4>Vendors</h4>
+    {%- assign vendors_sorted = site.vendors | sort: 'order' -%}
+    {%- for v in vendors_sorted -%}
+      <a href="{{ v.url | relative_url }}">{{ v.title }}</a>
+    {%- endfor -%}
+  </div>
+
+  <div class="site-footer__col">
+    <h4>Collective</h4>
+    <a href="{{ '/about/' | relative_url }}">About</a>
+    <a href="{{ '/contact/' | relative_url }}">Find Us</a>
+  </div>
+
+  <p class="site-footer__copy">
+    &copy; {{ site.time | date: '%Y' }} Chattanooga Collective ·
+    Tennessee Cottage Food Law compliant ·
+    Each vendor sells direct.
+  </p>
+</footer>

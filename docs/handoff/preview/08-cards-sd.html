@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0703; padding: 24px; display: flex; gap: 16px; flex-wrap: wrap; }
+  /* Grid card */
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: rgba(200,80,20,0.12); border: 1px solid rgba(200,80,20,0.12); width: 360px; }
+  .grid-cell { background: #0d0703; padding: 22px 18px; }
+  .grid-cell .icon { font-size: 22px; margin-bottom: 10px; display: block; }
+  .grid-cell h3 { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #f5ede0; margin-bottom: 6px; }
+  .grid-cell p { font-family: 'Inter', sans-serif; font-size: 11px; line-height: 1.65; color: #a88858; }
+  /* Stat card */
+  .stat { border-left: 2px solid #e8522a; padding-left: 20px; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: #e8522a; line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #987848; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; }
+  .stats { display: flex; flex-direction: column; gap: 20px; padding: 4px 0; }
+  /* Pairing card */
+  .pairing { background: #0d0703; border: 1px solid rgba(200,80,20,0.12); padding: 22px 16px; text-align: center; width: 100px; }
+  .pairing-emoji { font-size: 24px; margin-bottom: 8px; display: block; }
+  .pairing h4 { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: #c4aa8a; margin-bottom: 5px; }
+  .pairing p { font-family: 'Inter', sans-serif; font-size: 10px; line-height: 1.5; color: #886838; }
+  .pairings { display: flex; gap: 8px; }
+</style>
+</head>
+<body>
+  <!-- Grid card pattern -->
+  <div class="grid">
+    <div class="grid-cell"><span class="icon">🌶️</span><h3>Heat</h3><p>Sichuan chili, layered complexity</p></div>
+    <div class="grid-cell"><span class="icon">🫙</span><h3>Crisp</h3><p>Fried aromatics, shallots, garlic</p></div>
+    <div class="grid-cell"><span class="icon">🛢️</span><h3>Oil</h3><p>Slow-infused, fragrant base</p></div>
+  </div>
+
+  <!-- Stat cards -->
+  <div class="stats">
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Small Batch</div></div>
+    <div class="stat"><div class="stat-num">CHI</div><div class="stat-label">Sichuan Heritage</div></div>
+    <div class="stat"><div class="stat-num">CHA</div><div class="stat-label">Made in Chattanooga</div></div>
+  </div>
+
+  <!-- Pairing cards -->
+  <div class="pairings">
+    <div class="pairing"><span class="pairing-emoji">🥚</span><h4>Eggs</h4><p>Any style, any time</p></div>
+    <div class="pairing"><span class="pairing-emoji">🍜</span><h4>Noodles</h4><p>Drizzle generously</p></div>
+  </div>
+</body>
+</html>

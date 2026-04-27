@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Inter:wght@500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0703; }
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 40px;
+    background: rgba(13,7,3,0.96);
+    border-bottom: 1px solid rgba(200,80,20,0.2);
+    backdrop-filter: blur(8px);
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: #e8522a; letter-spacing: 0.04em; }
+  .links { display: flex; gap: 32px; list-style: none; }
+  .links a { color: #c4aa8a; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; }
+  .links a:hover { color: #e8522a; }
+  .ig { display: flex; align-items: center; gap: 7px; color: #c4aa8a; text-decoration: none; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.06em; }
+  .ig svg { width: 15px; height: 15px; }
+</style>
+</head>
+<body>
+  <nav>
+    <span class="logo">Starving Dragon</span>
+    <ul class="links">
+      <li><a href="#">Our Story</a></li>
+      <li><a href="#">The Oil</a></li>
+      <li><a href="#">Pairings</a></li>
+      <li><a href="#">Order</a></li>
+    </ul>
+    <a href="#" class="ig">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="5"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      @starvingdragonoil
+    </a>
+  </nav>
+</body>
+</html>

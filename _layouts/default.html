@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ site.locale | default: 'en' }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body class="brand-cc{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  {%- include nav.html -%}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {%- include footer.html -%}
+</body>
+</html>

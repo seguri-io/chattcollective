@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f5f0e8; padding: 24px 28px; display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-start; }
+
+  /* Buttons */
+  .col { display: flex; flex-direction: column; gap: 8px; }
+  .tag { font-family: 'DM Sans', sans-serif; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #9a7d58; font-weight: 700; }
+  .btn-g  { background: #3a5c3a; color: #f5f0e8; border: none; padding: 13px 28px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; display: inline-block; }
+  .btn-gh { background: #5a8a4a; color: #f5f0e8; border: none; padding: 13px 28px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; display: inline-block; transform: translateY(-1px); }
+  .btn-o  { background: transparent; color: #3d3020; border: 1.5px solid rgba(60,40,10,0.22); padding: 12px 27px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; display: inline-block; }
+  .btn-oh { background: transparent; color: #3a5c3a; border: 1.5px solid #3a5c3a; padding: 12px 27px; font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; border-radius: 5px; display: inline-block; }
+
+  /* Vendor card */
+  .vendor-card {
+    background: #faf7f2; border: 1px solid rgba(60,40,10,0.12);
+    border-radius: 6px; padding: 20px; width: 200px;
+    box-shadow: 0 2px 10px rgba(30,20,10,0.07);
+  }
+  .vc-tag { font-family: 'DM Sans', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #c4831a; margin-bottom: 6px; }
+  .vc-name { font-family: 'Lora', serif; font-size: 16px; font-weight: 700; color: #1e1a14; margin-bottom: 6px; }
+  .vc-desc { font-family: 'DM Sans', sans-serif; font-size: 12px; line-height: 1.6; color: #6a5438; }
+  .vc-link { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #3a5c3a; margin-top: 12px; display: inline-block; text-decoration: none; }
+
+  /* Ridge & Valley card — alt color accent */
+  .vc-rv .vc-tag { color: #6b8c5a; }
+</style>
+</head>
+<body>
+  <div class="col">
+    <span class="tag">Primary</span>
+    <span class="btn-g">Shop Now</span>
+    <span class="tag">Hover</span>
+    <span class="btn-gh">Shop Now</span>
+    <span class="tag">Outline</span>
+    <span class="btn-o">Learn More</span>
+    <span class="tag">Outline Hover</span>
+    <span class="btn-oh">Learn More</span>
+  </div>
+
+  <div class="vendor-card">
+    <div class="vc-tag">Member Vendor</div>
+    <div class="vc-name">Starving Dragon</div>
+    <div class="vc-desc">Craft-batch Sichuan chili crisp oil, hand-made in Chattanooga, TN.</div>
+    <a href="#" class="vc-link">Visit →</a>
+  </div>
+
+  <div class="vendor-card vc-rv">
+    <div class="vc-tag">Member Vendor</div>
+    <div class="vc-name">Ridge and Valley</div>
+    <div class="vc-desc">Allergen-free functional foods, enriched with adaptogens &amp; superfoods.</div>
+    <a href="#" class="vc-link">Visit →</a>
+  </div>
+</body>
+</html>

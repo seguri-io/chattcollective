@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0d0703; font-family: 'Inter', system-ui, sans-serif; padding: 20px; }
+  .row { display: flex; gap: 0; }
+  .swatch { flex: 1; height: 72px; display: flex; flex-direction: column; justify-content: flex-end; padding: 8px 10px; }
+  .swatch-label { font-size: 10px; font-weight: 600; letter-spacing: 0.06em; color: #0d0703; }
+  .swatch-hex   { font-size: 9px; color: #0d0703; opacity: 0.55; margin-top: 2px; }
+  .dark .swatch-label { color: #c4aa8a; }
+  .dark .swatch-hex   { color: #c4aa8a; }
+  .section-label { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: #987848; margin-bottom: 8px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="section-label">Starving Dragon — Warm Text Ramp</div>
+<div class="row">
+  <div class="swatch" style="background:#f5ede0;">
+    <span class="swatch-label">text-1</span>
+    <span class="swatch-hex">#f5ede0</span>
+  </div>
+  <div class="swatch" style="background:#c4aa8a;">
+    <span class="swatch-label">text-2</span>
+    <span class="swatch-hex">#c4aa8a</span>
+  </div>
+  <div class="swatch" style="background:#b89870;">
+    <span class="swatch-label">text-3</span>
+    <span class="swatch-hex">#b89870</span>
+  </div>
+  <div class="swatch" style="background:#a88858;">
+    <span class="swatch-label">text-4</span>
+    <span class="swatch-hex">#a88858</span>
+  </div>
+  <div class="swatch" style="background:#987848; dark">
+    <span class="swatch-label" style="color:#f5ede0">text-5</span>
+    <span class="swatch-hex" style="color:#f5ede0">#987848</span>
+  </div>
+  <div class="swatch" style="background:#886838;">
+    <span class="swatch-label" style="color:#f5ede0">text-6</span>
+    <span class="swatch-hex" style="color:#f5ede0">#886838</span>
+  </div>
+  <div class="swatch" style="background:#705028;">
+    <span class="swatch-label" style="color:#f5ede0">text-7</span>
+    <span class="swatch-hex" style="color:#f5ede0">#705028</span>
+  </div>
+</div>
+</body>
+</html>
