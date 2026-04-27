@@ -16,3 +16,5 @@ tags:
   - Adaptogens
 coming_soon: true
 ---
+
+Site and ordering still in progress. Find Ridge &amp; Valley at the HiLo Market on Saturdays, or reach out through the Collective at <a href="mailto:hello@chattcollective.com">hello@chattcollective.com</a>.

@@ -23,9 +23,8 @@ permalink: /
 </section>
 
 <section class="cc-section cc-section--alt" id="members" aria-labelledby="members-heading">
-  <div class="cc-section__inner cc-section__inner--narrow">
+  <div class="cc-section__inner">
     {% include section_header.html eyebrow="Our Members" title="The Collective." %}
-    <p class="lede">Each member runs their own kitchen. Order direct from whoever made what you&rsquo;re after.</p>
 
     <div class="members-stack">
       {%- assign members_sorted = site.members | sort: 'order' -%}
