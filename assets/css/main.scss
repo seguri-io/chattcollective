@@ -295,15 +295,16 @@ h2, h3, h4 { font-weight: 500; }
    ============================================================= */
 
 .hero {
-  min-height: 78vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
-  padding: var(--space-20) var(--space-8);
-  background:
-    radial-gradient(ellipse 75% 60% at 65% 25%, rgba(40, 64, 40, 0.50) 0%, transparent 70%),
-    radial-gradient(ellipse 65% 55% at 12% 88%, rgba(40, 64, 40, 0.32) 0%, transparent 65%),
-    radial-gradient(ellipse at 35% 65%, rgba(196, 131, 26, 0.14) 0%, transparent 55%),
-    var(--cc-bg);
+  padding: var(--space-12) var(--space-8);
+  background-color: var(--cc-bg);
+  background-image:
+    radial-gradient(ellipse 130% 100% at 60% 30%, rgba(40, 64, 40, 0.50) 0%, transparent 78%),
+    radial-gradient(ellipse 130% 100% at 25% 85%, rgba(40, 64, 40, 0.32) 0%, transparent 78%),
+    radial-gradient(ellipse 90% 70% at 80% 80%, rgba(196, 131, 26, 0.20) 0%, transparent 70%),
+    linear-gradient(rgba(40, 64, 40, 0.06), rgba(40, 64, 40, 0.06));
   width: 100%;
 }
 .hero__inner {
@@ -370,7 +371,7 @@ section.cc-section--alt {
 
 @media (max-width: 768px) {
   section.cc-section { padding: var(--space-16) var(--space-5); }
-  .hero { padding: var(--space-16) var(--space-5); min-height: 70vh; }
+  .hero { padding: var(--space-10) var(--space-5); min-height: 50vh; }
 }
 
 .section-header { margin-bottom: var(--space-10); }
