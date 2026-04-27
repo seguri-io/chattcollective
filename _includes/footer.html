@@ -8,22 +8,27 @@
   </div>
 
   <div class="site-footer__col">
-    <h4>Vendors</h4>
-    {%- assign vendors_sorted = site.vendors | sort: 'order' -%}
-    {%- for v in vendors_sorted -%}
-      <a href="{{ v.url | relative_url }}">{{ v.title }}</a>
+    <h4>Members</h4>
+    {%- assign members_sorted = site.members | sort: 'order' -%}
+    {%- for m in members_sorted -%}
+      {%- if m.external_url -%}
+        <a href="{{ m.external_url }}" target="_blank" rel="noopener">{{ m.title }} &rarr;</a>
+      {%- else -%}
+        <a href="{{ '/#members' | relative_url }}">{{ m.title }}</a>
+      {%- endif -%}
     {%- endfor -%}
   </div>
 
   <div class="site-footer__col">
     <h4>Collective</h4>
-    <a href="{{ '/about/' | relative_url }}">About</a>
-    <a href="{{ '/contact/' | relative_url }}">Find Us</a>
+    <a href="{{ '/#why' | relative_url }}">Why a Collective</a>
+    <a href="{{ '/#find' | relative_url }}">Find Us</a>
+    <a href="mailto:hello@chattcollective.com">hello@chattcollective.com</a>
   </div>
 
   <p class="site-footer__copy">
     &copy; {{ site.time | date: '%Y' }} Chattanooga Collective ·
     Tennessee Cottage Food Law compliant ·
-    Each vendor sells direct.
+    Each member sells direct.
   </p>
 </footer>

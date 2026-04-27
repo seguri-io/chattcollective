@@ -1,45 +1,46 @@
 ---
 layout: home
 title: Chattanooga Collective
-description: Two Chattanooga makers. One front door. Cottage food made by your neighbors under Tennessee's Domestic Kitchen rules.
+description: Homemade goods, made by your neighbors. A devoted group of artisan cottage food makers in the Appalachian foothills, working in the old way of mountain communities.
 permalink: /
 ---
 <section class="hero" aria-labelledby="hero-title">
   <p class="eyebrow">Cottage Food · Chattanooga, TN</p>
   <h1 class="hero__title" id="hero-title">
-    Two Chattanooga makers.<br>
-    <em>One front door.</em>
+    Multiple makers,<br>
+    <em>one collective.</em>
   </h1>
   <p class="hero__sub">Homemade goods, made by your neighbors.</p>
   <p class="hero__desc">
-    Chattanooga Collective is a small group of independent cottage food makers cooking and bottling out of our home kitchens. Each of us runs our own thing — we band together so it&rsquo;s easier for you to find us.
+    Chattanooga Collective is a devoted group of artisan cottage food makers in the Appalachian foothills. Each of us runs our own kitchen — but we pool our reach the old way of mountain communities: neighbors helping neighbors.
   </p>
   <div class="hero__cta">
-    <a href="{{ '/vendors/' | relative_url }}" class="btn btn--primary">Meet the Vendors</a>
-    <a href="{{ '/about/' | relative_url }}" class="btn btn--ghost">About the Collective</a>
+    <a href="#members" class="btn btn--primary">Meet the Members</a>
+    <a href="#find" class="btn btn--ghost">Find Us at the Market</a>
   </div>
 </section>
 
-<section class="cc-section cc-section--alt" id="vendors" aria-labelledby="vendors-heading">
-  <div class="cc-section__inner">
-    {% include section_header.html eyebrow="Member Vendors" title="The Collective" %}
-    <p class="lede">Two makers, two distinct kitchens. Each runs their own thing — order direct from the maker.</p>
-    <div class="vendor-grid">
-      {%- assign vendors_sorted = site.vendors | sort: 'order' -%}
-      {%- for v in vendors_sorted -%}
-        {% include vendor_card.html vendor=v %}
+<section class="cc-section cc-section--alt" id="members" aria-labelledby="members-heading">
+  <div class="cc-section__inner cc-section__inner--narrow">
+    {% include section_header.html eyebrow="Our Members" title="The Collective." %}
+    <p class="lede">Each member runs their own kitchen — order direct from whoever made what you&rsquo;re after.</p>
+
+    <div class="members-stack">
+      {%- assign members_sorted = site.members | sort: 'order' -%}
+      {%- for m in members_sorted -%}
+        {% include member.html member=m %}
       {%- endfor -%}
     </div>
   </div>
 </section>
 
 <section class="cc-section" id="why" aria-labelledby="why-heading">
-  <div class="cc-section__inner">
-    {% include section_header.html eyebrow="Why a Collective?" title="Independent, together." center=true %}
-    <div class="prose" style="margin: 0 auto; text-align: center;">
-      <p>Cottage food making is personal work. Each maker pours real care into what they do — but being found, trusted, and remembered is hard to do alone.</p>
-      <p><strong>The Collective is the front door, not a parent company.</strong> Each vendor runs their own kitchen, sets their own prices, and handles their own orders. We pool our reach so neighbors can find us.</p>
-      <p>Everything sold through the Collective is made locally, in small batches, by hand.</p>
+  <div class="cc-section__inner cc-section__inner--narrow">
+    {% include section_header.html eyebrow="Why a Collective?" title="The old mountain way." %}
+    <div class="prose">
+      <p>Cottage food making is personal work. Each member pours real care into what they do — but being found is hard to do alone.</p>
+      <p>Around here, that&rsquo;s nothing new. Mountain communities have always pooled what they had &mdash; barn-raisings, harvest help, recipes copied across kitchens, hard work spread between many hands. The Collective is the modern shape of that habit.</p>
+      <p>Each of us runs our own kitchen and keeps our own brand. <strong>We share a website because that&rsquo;s what neighbors do.</strong></p>
     </div>
   </div>
 </section>
@@ -71,8 +72,8 @@ permalink: /
           <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
           <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
         </svg>
-        <h3>Independent, together</h3>
-        <p>Each vendor runs their own kitchen and brand. The Collective is a directory and a front door — never a layer between you and the maker.</p>
+        <h3>Neighbors helping neighbors</h3>
+        <p>The Collective shares a website and a tradition. Each member runs their own kitchen — together we keep the old mountain habit of mutual help alive.</p>
       </article>
     </div>
   </div>
@@ -90,7 +91,8 @@ permalink: /
 
     <div class="prose" style="margin-top: var(--space-8);">
       <p>Most Saturday mornings you can find us at the <strong>Highland Park Farmers Market</strong>. Stop by, taste what we&rsquo;re making, and pick up an order without the back-and-forth.</p>
-      <p>Schedules can shift week to week — for a specific vendor or product, check their page first. <a href="{{ '/contact/' | relative_url }}">More on where to find us &rarr;</a></p>
+      <p>Schedules can shift week to week — for a specific member or product, check their section above for their direct contact. All pickup is local to Chattanooga, TN; under Tennessee&rsquo;s cottage food rules we sell direct in-state and don&rsquo;t ship.</p>
+      <p>For collective-level questions — joining as a new member, press, or anything that isn&rsquo;t a member order — reach us at <a href="mailto:hello@chattcollective.com">hello@chattcollective.com</a>.</p>
     </div>
   </div>
 </section>

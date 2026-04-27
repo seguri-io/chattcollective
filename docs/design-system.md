@@ -2,15 +2,15 @@
 
 Status: **draft** — reconciled against the Claude Design handoff (preserved in `docs/handoff/`). Driven by `docs/brand-guidelines.md`.
 
-The Collective's job is to bridge two distinct vendor brands without flattening either. That shapes the system: we keep three palettes (Collective + Starving Dragon + Ridge & Valley), each with its own tokens, and the Collective's surface stays warm/earthy/calm so vendor accents can sit on top without clashing.
+The Collective's job is to bridge distinct member brands without flattening any of them. That shapes the system: we keep three palettes (Collective + Starving Dragon + Ridge & Valley), each with its own tokens, and the Collective's surface stays warm/earthy/calm so member accents can sit on top without clashing.
 
-If something here starts feeling slick or corporate, it's wrong. If something starts feeling like a unified brand layer over the vendors, that's also wrong.
+If something here starts feeling slick or corporate, it's wrong. If something starts feeling like a unified brand layer over the members, that's also wrong.
 
 ---
 
 ## Palette
 
-Three sets of tokens, prefixed by brand. Use the prefix everywhere (no aliasing into a single neutral set) so vendor pages can subtly shift accent colors without leaking across.
+Three sets of tokens, prefixed by brand. Use the prefix everywhere (no aliasing into a single neutral set) so member panels can subtly shift accent colors without leaking across.
 
 ### Chattanooga Collective (`--cc-*`)
 
@@ -19,7 +19,7 @@ Adopted from the design handoff verbatim (we agreed it's better calibrated than 
 | Token | Hex | Use |
 | --- | --- | --- |
 | `--cc-bg` | `#f5f0e8` | Default page background — warm parchment |
-| `--cc-bg-section` | `#ede6d8` | Alternating section, vendor-grid surface |
+| `--cc-bg-section` | `#ede6d8` | Alternating section background, members-stack surface |
 | `--cc-bg-card` | `#faf7f2` | Card / floating element |
 | `--cc-bg-dark` | `#2a2018` | Deep wood — footer, dark sections |
 | `--cc-text-1` | `#1e1a14` | Body / headings |
@@ -40,7 +40,7 @@ Adopted from the design handoff verbatim (we agreed it's better calibrated than 
 
 ### Starving Dragon (`--sd-*`)
 
-Adopted from the vendor's existing site. Don't change without their sign-off.
+Adopted from the member's existing site. Don't change without their sign-off.
 
 | Token | Hex | Use |
 | --- | --- | --- |
@@ -57,11 +57,11 @@ Adopted from the vendor's existing site. Don't change without their sign-off.
 | `--sd-icon-bg` | `rgba(232,82,42,0.08)` | Feature icon background |
 | `--sd-icon-border` | `rgba(232,82,42,0.18)` | Feature icon border |
 
-For the *Collective's* Starving Dragon vendor card, only `--sd-accent` (`#e8522a`) crosses into the Collective surface — used for the card's top border and "Order yours" link color. The dark backgrounds stay on starvingdragon.com.
+For the *Collective's* Starving Dragon member panel, only `--sd-accent` (`#e8522a`) crosses into the Collective surface — used for the card's top border and "Order yours" link color. The dark backgrounds stay on starvingdragon.com.
 
 ### Ridge & Valley (`--rv-*`)
 
-**Proposed — needs vendor sign-off.** Carries the Appalachian-rooted, functional/wellness direction from the brand guide. From the design handoff verbatim; safe to iterate once R&V validates.
+**Proposed — needs member sign-off.** Carries the Appalachian-rooted, functional/wellness direction from the brand guide. From the design handoff verbatim; safe to iterate once R&V validates.
 
 | Token | Hex | Use |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ For the *Collective's* Starving Dragon vendor card, only `--sd-accent` (`#e8522a
 | `--rv-text-inv` | `#f2f5ee` | Text on dark |
 | `--rv-border` | `rgba(60,80,40,0.14)` | Subtle dividers |
 
-For the *Collective's* Ridge & Valley vendor card, only `--rv-sage` (`#6b8c5a`) crosses over.
+For the *Collective's* Ridge & Valley member panel, only `--rv-sage` (`#6b8c5a`) crosses over.
 
 ### Contrast targets (verify in browser)
 
@@ -126,7 +126,7 @@ Their existing pairing. Keep verbatim.
 
 ### Ridge & Valley — TBD
 
-No font decision until R&V validates direction. Working hypothesis: a softer transitional serif (e.g., Cormorant, Crimson Pro, EB Garamond) + a humanist sans (e.g., Nunito Sans, Source Sans, Public Sans). Don't pick before vendor input.
+No font decision until R&V validates direction. Working hypothesis: a softer transitional serif (e.g., Cormorant, Crimson Pro, EB Garamond) + a humanist sans (e.g., Nunito Sans, Source Sans, Public Sans). Don't pick before member input.
 
 ### Type scale (Collective)
 
@@ -138,7 +138,7 @@ Base 18px, 1.25 modular ratio.
 | `--cc-fs-xs` | 14px | 0.875 | Captions, footer |
 | `--cc-fs-sm` | 16px | 1.0 | Secondary body |
 | `--cc-fs-md` | 18px | 1.125 | Body default |
-| `--cc-fs-lg` | 22px | 1.375 | Lede, vendor card titles |
+| `--cc-fs-lg` | 22px | 1.375 | Lede, member panel titles |
 | `--cc-fs-xl` | 28px | 1.75 | Section headings |
 | `--cc-fs-2xl` | 36px | 2.25 | Page titles |
 | `--cc-fs-3xl` | 48px | 3.0 | Hero (mobile) |
@@ -174,7 +174,7 @@ Section vertical rhythm: `--space-20` to `--space-24` between major sections on 
 ## Layout
 
 - Max content width: **72ch** for prose, **960–1100px** for layouts with cards
-- Single content column by default; two columns only when content benefits (vendor card grid)
+- Single content column by default; two columns only when content benefits (member panel grid)
 - Generous side padding on mobile: `--space-5` minimum (`--space-6` preferred)
 - Don't center body text. Left-align prose. Center is reserved for hero, About section.
 
@@ -184,8 +184,8 @@ Section vertical rhythm: `--space-20` to `--space-24` between major sections on 
 - **Radius:** small only. `--radius-sharp: 2px` (Starving Dragon style), `--radius-sm: 4px`, `--radius-md: 6px` (Collective default). No pills, no rounded heroes.
 - **Shadows:** sparingly. Tokens:
   - `--cc-shadow-sm: 0 1px 4px rgba(30,20,10,0.08)`
-  - `--cc-shadow-md: 0 4px 16px rgba(30,20,10,0.10)` — vendor card resting state
-  - `--cc-shadow-lg: 0 8px 32px rgba(30,20,10,0.12)` — vendor card hover
+  - `--cc-shadow-md: 0 4px 16px rgba(30,20,10,0.10)` — member panel resting state
+  - `--cc-shadow-lg: 0 8px 32px rgba(30,20,10,0.12)` — member panel hover
 
 The look is closer to a printed market poster than a SaaS dashboard.
 
@@ -233,25 +233,27 @@ Centered on About sections (with the divider also centered); left-aligned everyw
 
 No icon-only buttons unless icon is universally recognized.
 
-### Vendor card (typographic)
+### Member panel (typographic)
 
-No image required for v1 — use this card pattern. Image-first variant comes back in Phase 2.
+The site is single-page; each member gets a full-width panel within the Members section, stacked vertically. No images required for v1 — image-first variant comes back in Phase 2.
 
 ```
-[Top border accent — 3px, vendor color]   <-- --sd-accent for SD, --rv-sage for R&V
-[Category badge — pill]                    <-- vendor-color background at ~10% alpha
-[Vendor name — Fraunces, --cc-fs-lg]
-[Tagline — Fraunces italic, --cc-fs-sm, --cc-text-4]
-[Description — Work Sans, --cc-fs-sm, --cc-text-3]
+[Top border accent — 3px, member accent color]   <-- --sd-accent for SD, --rv-sage for R&V
+[Category badge — pill, member-color background at ~10% alpha]
+[Member name — Fraunces, --cc-fs-2xl]
+[Tagline — Fraunces italic, --cc-fs-lg, --cc-text-3]
+[Lead summary — Work Sans, --cc-fs-md, --cc-text-2]
+[Body prose — markdown rendered from _members/*.md, --cc-text-2]
 [Tag chips — Work Sans, 11px, --cc-text-4 on --cc-bg-section]
-[Action link — uppercase, vendor color, → arrow]
+[CTA: external link button (member accent color) OR "Site coming soon" badge]
+[TN cottage food disclosure block]
 ```
 
-- Card background: `--cc-bg-card`
+- Panel background: `--cc-bg-card`
 - Border: 1px `--cc-border` + the 3px top accent
-- Padding: `--space-8` (32) on mobile, `--space-9 --space-8` on desktop
-- Hover: lift via `--cc-shadow-lg`, `translateY(-2px)`
-- Whole card behaves as a focusable region; primary action is the link at the bottom
+- Padding: `--space-10 --space-8 --space-8` on desktop, `--space-8 --space-5 --space-6` on mobile
+- Stacking: panels live in a `.members-stack` flex column with `--space-8` gap
+- No hover lift — these aren't links, they're content blocks
 
 ### Stat / pickup-info card
 
@@ -264,12 +266,12 @@ Border-left: 2px solid accent, padding-left: 24px. No background, no shadow. Use
 
 ### Disclosure block (TN cottage food)
 
-Required on individual vendor pages.
+Required on individual member panels.
 - Background: `--cc-bg-section`
 - Text: `--cc-text-3`, `--cc-fs-sm`
 - Padding: `--space-4`
 - Optional: small line-icon (home, leaf) on the left
-- Confirm exact wording with each vendor — TN statute language varies by category
+- Confirm exact wording with each member — TN statute language varies by category
 
 ### Values grid (3-up)
 
@@ -282,8 +284,8 @@ From the design handoff. 3 columns desktop, stacked mobile, 1px gap on `rgba(60,
 
 Dark wood (`--cc-bg-dark`), 3 columns + copyright row.
 - Logo + brand name + "Chattanooga, TN · Cottage Food" sub
-- "Vendors" column (links to each vendor page)
-- "Collective" column (About, Find Us, Join the Collective)
+- "Members" column (links anchor back to the members section, or out to each member's external site if they have one)
+- "Collective" column (Why a Collective, Find Us, contact email)
 - Copyright + "Tennessee Cottage Food Law compliant"
 
 ---
@@ -299,7 +301,7 @@ Dark wood (`--cc-bg-dark`), 3 columns + copyright row.
 
 Defined in `docs/brand-guidelines.md` — anti-stock, daylight, hands-in-frame. Add here:
 
-- Default treatment: slight desaturation (~10%) so vendor photos sit in the same color world. Hover removes desaturation.
+- Default treatment: slight desaturation (~10%) so member photos sit in the same color world. Hover removes desaturation.
 - Aspect ratios: 4:3 for cards, 21:9 for hero, 1:1 for tight grids
 - Empty image slot: `--cc-bg-section` block with a single line of `--cc-text-4` text "Photo coming soon" — never a stock placeholder
 
@@ -308,7 +310,7 @@ Defined in `docs/brand-guidelines.md` — anti-stock, daylight, hands-in-frame. 
 Almost none.
 
 - Hover transitions: 150–200ms ease-out, color/opacity/transform only
-- `translateY(-1px)` for button hover, `translateY(-2px)` for vendor card hover — that's the entire motion budget
+- `translateY(-1px)` for button hover, `translateY(-2px)` for member panel hover — that's the entire motion budget
 - No scroll-triggered animations, no fade-ins, no parallax
 - Respect `prefers-reduced-motion: reduce`
 
@@ -318,13 +320,13 @@ Almost none.
 - Body text minimum 18px (in the scale)
 - Never rely on color alone — links are underlined, not just colored
 - Focus ring: `2px solid --cc-ochre`, `2px` offset
-- Alt text required: vendor name + what's in the photo. `alt=""` only for purely decorative images.
+- Alt text required: member name + what's in the photo. `alt=""` only for purely decorative images.
 
 ---
 
 ## CSS variable manifest (drop-in starter)
 
-When the SCSS comes in, this is the `:root` block. Tokens are namespaced by brand so vendor pages can scope without leaking.
+When the SCSS comes in, this is the `:root` block. Tokens are namespaced by brand so member panels can scope without leaking.
 
 ```scss
 :root {
@@ -430,6 +432,6 @@ When the SCSS comes in, this is the `:root` block. Tokens are namespaced by bran
 ## Open questions
 
 - Final wordmark for Collective — does it want a mark, or wordmark-only? (Starving Dragon's vintage badge is the comparison point; the Collective should look quieter, not louder.)
-- Ridge & Valley type pairing — pick once vendor signs off
-- Whether to introduce a "member of Chattanooga Collective" badge component for vendors to embed on their own external sites
+- Ridge & Valley type pairing — pick once member signs off
+- Whether to introduce a "member of Chattanooga Collective" badge component for members to embed on their own external sites
 - Whether the homepage hero earns a real photo over the radial-gradient cream surface — only once we have one we like

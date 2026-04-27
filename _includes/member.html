@@ -1,0 +1,47 @@
+{%- comment -%}
+  Rich member panel — full content for a single member, rendered inline on
+  the homepage. Usage: {% include member.html member=m %}
+{%- endcomment -%}
+{%- assign m = include.member -%}
+{%- assign accent = m.accent | default: 'cc' -%}
+<article class="member-panel member-panel--{{ accent }}">
+  <div class="member-panel__inner">
+    <p class="member-panel__category">
+      <span class="badge badge--{{ accent }}">{{ m.category }}</span>
+    </p>
+    <h3 class="member-panel__name">{{ m.title }}</h3>
+    {%- if m.tagline -%}
+      <p class="member-panel__tagline">{{ m.tagline }}</p>
+    {%- endif -%}
+
+    {%- if m.summary -%}
+      <p class="member-panel__lead">{{ m.summary }}</p>
+    {%- endif -%}
+
+    <div class="member-panel__body prose">
+      {{ m.content }}
+    </div>
+
+    {%- if m.tags and m.tags.size > 0 -%}
+      <ul class="tag-chips" aria-label="Categories">
+        {%- for tag in m.tags -%}
+          <li class="tag-chip">{{ tag }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- if m.external_url -%}
+      <p class="member-panel__cta">
+        <a href="{{ m.external_url }}" class="btn btn--primary btn--{{ accent }}" target="_blank" rel="noopener">
+          {{ m.external_label | default: 'Visit their site' }} &rarr;
+        </a>
+      </p>
+    {%- elsif m.coming_soon -%}
+      <p class="member-panel__cta member-panel__cta--quiet">
+        <span class="badge badge--{{ accent }}">Site coming soon</span>
+      </p>
+    {%- endif -%}
+
+    {% include disclosure.html extra=m.disclosure_extra %}
+  </div>
+</article>

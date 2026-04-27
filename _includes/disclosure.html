@@ -1,7 +1,8 @@
+{%- assign extra = include.extra | default: page.disclosure_extra -%}
 <aside class="disclosure" role="note">
   <p>
-    <strong>Made under Tennessee's Domestic Kitchen rules.</strong>
-    Foods sold by this vendor are made in a home kitchen that is not subject to inspection by the Tennessee Department of Agriculture.
-    {%- if page.disclosure_extra %} {{ page.disclosure_extra }}{%- endif -%}
+    <strong>Made under Tennessee&rsquo;s Domestic Kitchen rules.</strong>
+    Foods sold by this member are made in a home kitchen that is not subject to inspection by the Tennessee Department of Agriculture.
+    {%- if extra and extra != '' %} {{ extra }}{%- endif -%}
   </p>
 </aside>

@@ -1,7 +1,7 @@
 main:
-  - title: Vendors
-    url: /vendors/
-  - title: About
-    url: /about/
+  - title: Members
+    url: /#members
+  - title: Why a Collective
+    url: /#why
   - title: Find Us
-    url: /contact/
+    url: /#find

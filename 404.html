@@ -1,14 +1,19 @@
 ---
-layout: page
+layout: default
 title: Lost in the kitchen.
 permalink: /404.html
-eyebrow: 404
-lede: That page isn't in this kitchen.
 sitemap: false
 ---
-
-The page you're looking for doesn't exist. It may have moved, or it may never have been written. Either way, the bread is fine.
-
-- [Back to the homepage]({{ '/' | relative_url }})
-- [Meet the vendors]({{ '/vendors/' | relative_url }})
-- [About the Collective]({{ '/about/' | relative_url }})
+<article class="error-page">
+  <p class="eyebrow">404</p>
+  <h1 class="error-page__title">Lost in the kitchen.</h1>
+  <span class="divider-bar" aria-hidden="true"></span>
+  <div class="prose">
+    <p>That page isn&rsquo;t in this kitchen. It may have moved, or it may never have been written. Either way, the bread is fine.</p>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Back to the homepage</a></li>
+      <li><a href="{{ '/#members' | relative_url }}">Meet the members</a></li>
+      <li><a href="{{ '/#find' | relative_url }}">Find us at the market</a></li>
+    </ul>
+  </div>
+</article>
