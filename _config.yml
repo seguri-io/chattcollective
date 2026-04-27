@@ -5,11 +5,6 @@ description: >-
   in Chattanooga, TN. Independent kitchens, shared website — homemade
   goods made by your neighbors under Tennessee's Domestic Kitchen rules.
 url: https://chattcollective.com
-# Temporary baseurl so the site renders correctly while previewing at
-# https://seguri-io.github.io/chattcollective/. REMOVE this line once the
-# chattcollective.com custom domain is configured (GH Pages → Settings →
-# Pages → Custom domain), at which point the site moves to the apex.
-baseurl: /chattcollective
 locale: en_US
 timezone: America/New_York
 
