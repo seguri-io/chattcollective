@@ -57,7 +57,8 @@ Warm and plainspoken, with the cadence of an Appalachian neighbor — somebody w
 - The word **"craft"** when describing the Collective itself. Members can self-describe with it (Starving Dragon does — "craft-batch") and the Collective can quote them. The Collective doesn't generate "craft" copy of its own.
 - The metaphor **"front door."** Use plain language: "shared website," "shared directory," or just describe what the Collective actually does.
 - **Specific counts** — "two members," "a small group of," "three makers." Leave room for growth. Use "multiple makers," "our members," "the Collective" instead.
-- Hide TN cottage food disclosures — surface them.
+- **Em dashes (`—`).** They read as AI-generated. Use a period, comma, colon, or parens instead, and let sentences end where they end. The en dash is allowed in numeric ranges only ("9am–12pm").
+- Don&rsquo;t hide TN cottage food disclosures. Surface them.
 
 > **The exemption that matters:** these rules apply to *Collective-authored* copy. Member self-descriptions are sovereign — if Starving Dragon's tagline is "Spewing heat since 2026," that's their tagline, full stop. The Collective doesn't rewrite it.
 

@@ -203,11 +203,28 @@ h2, h3, h4 { font-weight: 500; }
   font-size: 16px;
   line-height: 1;
 }
+.site-nav__brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
 .site-nav__name {
   font-family: var(--cc-font-display);
   font-size: var(--cc-fs-md);
   font-weight: 600;
   font-variation-settings: "SOFT" 80;
+  color: var(--cc-text-1);
+}
+.site-nav__tagline {
+  font-family: var(--cc-font-display);
+  font-style: italic;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--cc-text-3);
+  margin-top: 2px;
+}
+@media (max-width: 640px) {
+  .site-nav__tagline { display: none; }
 }
 
 .site-nav__links {
