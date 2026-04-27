@@ -218,11 +218,16 @@ h2, h3, h4 { font-weight: 500; }
 .site-nav__tagline {
   font-family: var(--cc-font-display);
   font-style: italic;
-  font-size: 0.75rem;
+  font-variation-settings: "ital" 1, "SOFT" 60, "opsz" 14;
+  font-size: 0.6875rem;
   font-weight: 400;
   color: var(--cc-text-3);
+  text-decoration: none;
   margin-top: 2px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
 }
+.site-nav__logo:hover .site-nav__tagline { color: var(--cc-text-3); }
 @media (max-width: 640px) {
   .site-nav__tagline { display: none; }
 }

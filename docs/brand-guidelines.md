@@ -18,7 +18,7 @@ The Collective is the shared website that helps locals find every member. It doe
 
 ## Mission
 
-Help Chattanooga neighbors find homemade food made by other Chattanooga neighbors.
+Help Chattanooga neighbors find handmade food made by other Chattanooga neighbors.
 
 The Collective is a shared website and a directory — not a co-op, not a storefront, not a brand on top of members. Each member runs their own kitchen under Tennessee's Domestic Kitchen / Tennessee Food Freedom rules. Every order, every dollar, every jar goes directly to the maker who made it.
 
@@ -118,7 +118,7 @@ Every Collective page should reinforce some combination of these:
 Decide once Ridge & Valley has launched and the Collective has settled.
 
 - "Multiple makers, one collective."
-- "Homemade goods, made by your neighbors."
+- "Handmade goods, made by your neighbors."
 - "Neighbors helping neighbors."
 - "The old mountain way."
 - "A Chattanooga cottage food collective."

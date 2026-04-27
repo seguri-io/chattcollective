@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-**Chattanooga Collective** is the marketing site for a devoted group of artisan cottage food makers in Chattanooga, TN. It's a static GitHub Pages / Jekyll site at `chattcollective.com` (the URL is the contraction; the public name is "Chattanooga Collective" — don't use "Chatt Collective" in headlines or formal copy). The site's job is to (a) help locals find homemade goods from members and (b) give each member a section they can link out to. Members operate under Tennessee's Domestic Kitchen / cottage food rules — the site does not handle payments or fulfillment.
+**Chattanooga Collective** is the marketing site for a devoted group of artisan cottage food makers in Chattanooga, TN. It's a static GitHub Pages / Jekyll site at `chattcollective.com` (the URL is the contraction; the public name is "Chattanooga Collective" — don't use "Chatt Collective" in headlines or formal copy). The site's job is to (a) help locals find handmade goods from members and (b) give each member a section they can link out to. Members operate under Tennessee's Domestic Kitchen / cottage food rules — the site does not handle payments or fulfillment.
 
 This is **three brands, not one**: the Collective umbrella plus member sub-brands. The design system has separate token sets (`--cc-*`, `--sd-*`, `--rv-*`) so member accents can sit on the Collective surface without flattening any member's identity.
 
