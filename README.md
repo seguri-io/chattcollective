@@ -7,7 +7,7 @@ This site is a shared directory, not a storefront. Each member runs their own ki
 ## Current members
 
 - **[Starving Dragon](https://starvingdragon.com)**. Sichuan chili crisp oil, craft-batch, made in Chattanooga.
-- **Ridge &amp; Valley**. Functional allergen-free foods (sea vegetables, adaptogenic mushrooms, ayurvedic spices), Appalachian-rooted. Site forthcoming.
+- **Ridge &amp; Valley**. Functional foods free of all major allergens (sea vegetables, adaptogenic mushrooms, ayurvedic spices), Appalachian-rooted. Site forthcoming.
 
 ## Status
 

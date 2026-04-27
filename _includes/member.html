@@ -18,9 +18,12 @@
       <p class="member-panel__lead">{{ m.summary }}</p>
     {%- endif -%}
 
-    <div class="member-panel__body prose">
-      {{ m.content }}
-    </div>
+    {%- assign body_text = m.content | strip_html | strip -%}
+    {%- if body_text != '' -%}
+      <div class="member-panel__body prose">
+        {{ m.content }}
+      </div>
+    {%- endif -%}
 
     {%- if m.tags and m.tags.size > 0 -%}
       <ul class="tag-chips" aria-label="Categories">

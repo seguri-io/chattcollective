@@ -12,7 +12,7 @@ The site is **single-page**: every section lives on the homepage; nav links are 
 
 Current members:
 - **Starving Dragon** — Sichuan chili crisp oil, craft-batch. Has its own existing brand (dark/moody site, vintage illustrated badge logo, Playfair Display + Inter, chili-red `#e8522a`). Site: https://starvingdragon.com. Tagline: "Spewing heat since 2026."
-- **Ridge & Valley** — functional allergen-free foods (sea vegetables, adaptogenic mushrooms, ayurvedic spices) with an Appalachian-rooted framing (the name comes from the Ridge and Valley Appalachians). No site yet; visual identity is proposed pending member sign-off.
+- **Ridge & Valley**. Functional foods free of all major allergens (sea vegetables, adaptogenic mushrooms, ayurvedic spices) with an Appalachian-rooted framing (the name comes from the Ridge and Valley Appalachians). No site yet; visual identity is proposed pending member sign-off. Note: write "free of all major allergens" or "free of major allergens" rather than "allergen-free" — the latter is overclaiming and the member specifically prefers the more precise phrasing.
 
 ## Source of truth for visual & voice decisions
 

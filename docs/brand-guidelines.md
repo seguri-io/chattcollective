@@ -82,7 +82,7 @@ Captured from their existing brand. Don't change without confirming.
 **Inferred — confirm with member before publishing.**
 
 - Warm, educational. The functional ingredients deserve real explanation, but explained without being preachy.
-- Wellness vocabulary is fine in member copy: superfoods, adaptogens, allergen-free, nourishing.
+- Wellness vocabulary is fine in member copy: superfoods, adaptogens, nourishing. Use **"free of all major allergens"** (or "free of major allergens"), not "allergen-free" — the shorter form is overclaiming and Ridge &amp; Valley specifically prefers the precise phrasing.
 - Inclusive: "tastes just as good — or better" rather than "this is good *for* you."
 - Likely second-person ("you").
 - **Appalachian framing.** The name comes from the Ridge and Valley Appalachians — the topographic province that runs through Chattanooga. Lean into that:

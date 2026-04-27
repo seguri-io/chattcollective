@@ -43,7 +43,7 @@ Site scope:
 - [x] `sitemap.xml` and `feed.xml` (jekyll-feed only outputs feed if posts exist; harmless empty otherwise)
 - [x] HTTPS enforced; preview at `https://seguri-io.github.io/chattcollective/`
 - [ ] **Voice / copy review by both current members** — every panel and every Collective-authored line read against the brand voice rules
-- [ ] **TN cottage food disclosure language confirmed with each member** — the canonical wording works for chili crisp oil and functional/allergen-free goods, but each member should sign off on what's specific to their products
+- [ ] **TN cottage food disclosure language confirmed with each member**. The site-wide footer disclosure covers members in aggregate; each member should sign off on whether the shared wording works for their specific product category, or whether they need an additional per-panel note.
 - [ ] Custom domain `chattcollective.com` wired (Settings → Pages → Custom domain), `baseurl: /chattcollective` removed from `_config.yml`
 - [ ] Favicon set generated from the final wordmark
 
