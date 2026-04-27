@@ -53,6 +53,7 @@
   /* ── Starving Dragon (member accent only) ─────────── */
   --sd-accent:      #e8522a;
   --sd-accent-dark: #c43d1a;
+  --sd-accent-text: #a13315; /* AA contrast for chili TEXT on light tinted bg */
 
   /* ── Ridge & Valley (member accent only) ──────────── */
   --rv-sage:      #6b8c5a;
@@ -517,7 +518,7 @@ section.cc-section--alt {
   margin-bottom: var(--space-3);
   align-self: flex-start;
 }
-.badge--sd  { background: rgba(232, 82, 42, 0.10);  color: var(--sd-accent-dark); }
+.badge--sd  { background: rgba(232, 82, 42, 0.10);  color: var(--sd-accent-text); }
 .badge--rv  { background: rgba(107, 140, 90, 0.14); color: var(--rv-sage-dark); }
 .badge--cc  { background: rgba(58, 92, 58, 0.10);   color: var(--cc-green); }
 
