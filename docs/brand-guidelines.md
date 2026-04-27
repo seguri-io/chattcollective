@@ -58,7 +58,7 @@ Warm and plainspoken, with the cadence of an Appalachian neighbor — somebody w
 - The metaphor **"front door."** Use plain language: "shared website," "shared directory," or just describe what the Collective actually does.
 - **Specific counts** — "two members," "a small group of," "three makers." Leave room for growth. Use "multiple makers," "our members," "the Collective" instead.
 - **Em dashes (`—`).** They read as AI-generated. Use a period, comma, colon, or parens instead, and let sentences end where they end. The en dash is allowed in numeric ranges only ("9am–12pm").
-- Don&rsquo;t hide TN cottage food disclosures. Surface them.
+- Don&rsquo;t hide the TN cottage food disclosure. It&rsquo;s rendered once site-wide in the footer (covers all members in aggregate). Don&rsquo;t move it back to per-panel without member sign-off.
 
 > **The exemption that matters:** these rules apply to *Collective-authored* copy. Member self-descriptions are sovereign — if Starving Dragon's tagline is "Spewing heat since 2026," that's their tagline, full stop. The Collective doesn't rewrite it.
 

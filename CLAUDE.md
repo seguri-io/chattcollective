@@ -37,7 +37,7 @@ If a decision isn't covered there, surface that gap rather than inventing one in
 Members sell under Tennessee's Domestic Kitchen / Tennessee Food Freedom Act rules. This shapes what the site can and can't claim:
 
 - Member panels should not imply commercial-kitchen production unless the member actually has one
-- Required disclosures (e.g., "made in a home kitchen not subject to inspection by the Tennessee Department of Agriculture") belong on individual member panels, not buried in a footer — confirm wording with each member
+- The TN Domestic Kitchen disclosure is rendered **once site-wide in the footer**, not per member panel. Don't add per-panel disclosures unless a specific member's product category needs different language. The shared wording covers all members in aggregate ("Foods sold by Collective members are made in home kitchens that are not subject to inspection by the Tennessee Department of Agriculture").
 - Don't add e-commerce, shipping, or interstate sales features without checking with members first; the legal envelope is narrower than typical online retail
 
 When in doubt, leave a `TODO(legal)` comment and ask rather than guessing.
